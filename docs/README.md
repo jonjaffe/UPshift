@@ -13,8 +13,8 @@ UpShift is a web application inspired by Shift built using Ruby on Rails and Rea
  Car View
  Car Search
  Favoriting
- Test Drive Booking
  BONUS
+ Test Drive Booking
  Google Maps API integration for test drives
  Auto pagination
 
@@ -30,12 +30,20 @@ UpShift is a web application inspired by Shift built using Ruby on Rails and Rea
 
  Objective: Car view renders a car detail page with all pertinent info.
 
- Phase 4: Categories (2 days)
+ Phase 4: Car Search (2 days)
 
- Objective: Events can be tagged with categories, and categories are searchable.
- Phase 5: Bookmarking Events (1 day)
+ Objective: Car index page has a form which, when changed, updates which cars are displayed.
 
- Object: Users can bookmark events in order to add them to a saved list.
- Phase 6: Purchasing Tickets (1 day)
+ Phase 5: Favoriting (1 day)
 
- Objective: Users can purchase tickets to add them to saved list.
+ Object: Users can favorite cars and there is a favorite page which contains all the cars they've favorited.
+
+ BONUS
+ Test Drive Booking
+ Users can book a test drive by selecting a date and time, and will receive an email upon completion of the form.
+
+ Google Maps API integration
+ Users can book a test drive and specify where they'd like the car to be dropped off, giving the user a choice of manually typing an address or using the Google Maps API to automatically get it dropped off where they are located.
+
+ Auto pagination
+ Rather than loading hundreds or potentially thousands of cars on the index page, there will be a set limit of cars to be displayed and once the user reaches the bottom of the page, more cars get rendered underneath
