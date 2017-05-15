@@ -1,5 +1,5 @@
 Very unclear on this
-
+```
 {
   currentUser: {
     id: 1,
@@ -31,3 +31,4 @@ Very unclear on this
       user_id: 1
     }
 }
+```
