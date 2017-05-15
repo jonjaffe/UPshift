@@ -1,7 +1,7 @@
 UpShift
 
 Heroku Link
-Trello Link
+https://trello.com/b/rVOjkELl/upshift
 
 Minimum Viable Product
 
