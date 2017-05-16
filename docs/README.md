@@ -19,7 +19,8 @@ UpShift is a web application inspired by Shift built using Ruby on Rails and Rea
  4. Car View
  5. Car Search
  6. Favoriting
- 
+ 7. README
+
  BONUS
  ------
  Test Drive Booking

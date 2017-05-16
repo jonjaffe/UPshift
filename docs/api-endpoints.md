@@ -20,5 +20,6 @@ CARS
 FAVORITES
 ------
 
-- PATCH /api/users/1
-- GET /api/users/1
+- PATCH /api/favorites/:id
+- GET /api/favorites/
+- POST /api/favorites/
