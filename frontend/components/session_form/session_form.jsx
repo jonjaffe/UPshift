@@ -71,21 +71,21 @@ class SessionForm extends React.Component {
         <form className="session_form_box" onSubmit={this.handleSubmit}>
           <h2>Welcome to UpShift</h2>
           <br/>
-          Please {this.writeTopAction()}
+          <div className="top_session_form_text">Please {this.writeTopAction()}</div>
           <br/>
           {this.renderErrors()}
           <br/>
           <div className="session_form">
-            <label>Email:
+            <label><div className="form_label">Email:</div>
               <input type="text" value={this.state.email} onChange={this.update('email')}></input>
             </label>
             <br/>
-            <label>Password:
+            <label><div className="form_label">Password:</div>
               <input type="password" value={this.state.password} onChange={this.update('password')}></input>
             </label>
             <br/>
-            <input type="submit" value="Submit"></input>
-            <button onClick={this.demoAccount}>Demo Account</button>
+            <input className="session_form_button" type="submit" value="Submit"></input>
+            <button className="session_form_button" onClick={this.demoAccount}>Demo Account</button>
             <br/>
             {this.navLink()} instead
           </div>

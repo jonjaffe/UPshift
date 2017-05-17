@@ -1,0 +1,90 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.navbar_all_elements {
+  background-color: #424242;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f5f5f5;
+  
+  // padding-left: 15px;
+  // padding-right: 15px;
+  /*margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;*/
+  text-decoration: none;
+  h1, a {
+    text-decoration: none;
+    color: #f5f5f5;
+  }
+  width: 100%;
+}
+
+
+
+.navbar_all_elements:link, .navbar_all_elements:visited {
+  color: #f5f5f5
+}
+/*a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: blue;
+}
+a:hover {
+    color: red;
+}*/
+
+.session_form_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin: 10px auto 0px auto;
+  padding: 10px;
+  width: 25%;
+  .session_form_button {
+    color: #FFF;
+    background-color: #DA4F49;
+    border-color: rgba(0,0,0,0.3);
+	  text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+    margin: 2.5px;
+  }
+  .session_form_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .session_form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .form_label {
+        width: 80px;
+      }
+    }
+  }
+}
+
+.logged_in_heart {
+  height: 30px;
+  width: 30px;
+}
+
+.navbar_right {
+  display: flex;
+}

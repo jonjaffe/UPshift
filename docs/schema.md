@@ -24,3 +24,10 @@ id integer not null primary key,
 user_id not null,
 car_id not null
 //BELONGS TO USER, BELONGS TO CAR
+
+| Users         | Data Type     | Constraints  |
+| ------------- |:-------------:| ------------:|
+| id            | integer       | not null, pk |
+| email         | string        | not null, idx|
+|password_digest| string        | not null     |
+| session_token | string        | not null, idx|
