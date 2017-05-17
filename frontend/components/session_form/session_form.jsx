@@ -32,13 +32,12 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    console.log(user);
     this.props.processForm({user});
   }
 
   navLink() {
     if (this.props.formType === 'login') {
-      return <Link to="/signup">Sign Up</Link>;
+      return <div className="instead"><Link to="/signup">Sign Up</Link></div>;
     } else {
       return <Link to="/login">Log In</Link>;
     }
@@ -65,34 +64,35 @@ class SessionForm extends React.Component {
     }
   }
 
-  render() {
+    render() {
+    const demoButton = this.props.formType === "login" ? <button className="demo_button" onClick={this.demoAccount}>Demo Account</button> : undefined//this props form type ? demo button : undefined
     return (
       <div className="session_form_container">
         <form className="session_form_box" onSubmit={this.handleSubmit}>
-          <h2>Welcome to UpShift</h2>
+          <div className="top_session_form_text">{this.writeTopAction()}</div>
           <br/>
-          <div className="top_session_form_text">Please {this.writeTopAction()}</div>
+          <img src='http://i.cdn.turner.com/nba/nba/teamsites/images/legacy/celtics/CelticsLogo_History.gif' width={150} height={150} mode='fit' />
           <br/>
           {this.renderErrors()}
           <br/>
           <div className="session_form">
-            <label><div className="form_label">Email:</div>
-              <input type="text" value={this.state.email} onChange={this.update('email')}></input>
-            </label>
+              <input type="text" value={this.state.email} onChange={this.update('email')} placeholder="Email"></input>
             <br/>
-            <label><div className="form_label">Password:</div>
-              <input type="password" value={this.state.password} onChange={this.update('password')}></input>
-            </label>
+              <input type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password"></input>
             <br/>
-            <input className="session_form_button" type="submit" value="Submit"></input>
-            <button className="session_form_button" onClick={this.demoAccount}>Demo Account</button>
+            <input className="session_form_button session_form_button2" type="submit" value="Submit"></input>
             <br/>
-            {this.navLink()} instead
           </div>
         </form>
+        <div className="demo_and_instead">
+          {demoButton}
+          {this.navLink()}
+        </div>
       </div>
     )
   }
 }
+
+
 
 export default SessionForm;

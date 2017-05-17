@@ -10,33 +10,33 @@ class Navbar extends React.Component {
     if (this.props.loggedIn) {
       return (
         <div className="navbar_all_elements">
-          <span className="navbar_left">
+          <div className="navbar_left">
             <header>
               <Link to="/"><h1>UpShift</h1></Link>
             </header>
-          </span>
-          <span className="navbar_right">
-            <Link to={`/favorites/${this.props.currentUser.id}`}><img className="logged_in_heart" src="https://i.stack.imgur.com/iBCpb.png"/></Link>
+          </div>
+          <div className="navbar_right">
+            <span><Link to={`/favorites/${this.props.currentUser.id}`}><img className="logged_in_heart" src="https://i.stack.imgur.com/iBCpb.png"/></Link></span>
             &nbsp;
-            <button onClick={this.props.deleteSession}>Log Out</button>
-          </span>
+            <span><button onClick={this.props.deleteSession}>Log Out</button></span>
+          </div>
         </div>
       )
     } else {
       return (
         <div className="navbar_all_elements">
-          <span className="navbar_left">
+          <div className="navbar_left">
             <header>
               <Link to="/"><h1>UpShift</h1></Link>
             </header>
-          </span>
-          <span className="navbar_right">
+          </div>
+          <div className="navbar_right">
             Fake Heart
             &nbsp;
             <span><Link to="/signup">Sign Up</Link></span>
             &nbsp;
             <span><Link to="/login">Log In</Link></span>
-          </span>
+          </div>
         </div>
       )
     }

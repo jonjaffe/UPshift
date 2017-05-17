@@ -18,7 +18,7 @@ export const receiveErrors = (errors) => {
 
 export const postUser = (user) => dispatch => {
   return SessionUtil.postUser(user)
-    .then(res => dispatch(receiveCurrentUser(res)),
+    .then(res => dispatch(receiveCurrentUser(res.currentUser)),
     error => dispatch(receiveErrors(error.responseJSON)));
 };
 
