@@ -67,23 +67,22 @@ a:hover {
   .session_form_button {
     color: #FFF;
     background-color: #DA4F49;
-    border-color: rgba(0,0,0,0.3);
-	  text-shadow: 0 1px 0 rgba(0,0,0,0.5);
     margin: 2.5px;
+    outline: 0;
+    background: #EF3B3A;
   }
   .session_form_button2 {
     outline: 0;
-      background: #EF3B3A;
-      width: 100%;
-      border: 5px solid yellow;
-      padding: 15px;
-      border-radius: 3px;
-      // +border-top-radius(3px)
-      // +border-bottom-radius(3px)
-      color: #FFFFFF;
-      font-size: 14px;
-      // +transition(all .3 ease)
-      cursor: pointer;
+    background: #EF3B3A;
+    width: 100%;
+    padding: 15px;
+    border-radius: 3px;
+    // +border-top-radius(3px)
+    // +border-bottom-radius(3px)
+    color: #FFFFFF;
+    font-size: 14px;
+    // +transition(all .3 ease)
+    cursor: pointer;
   }
   .session_form_box {
     display: flex;
@@ -126,9 +125,6 @@ header {
 
 
 .session_form_button {
-	-moz-box-shadow: 3px 4px 0px 0px #8a2a21;
-	-webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
-	box-shadow: 3px 4px 0px 0px #8a2a21;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
 	background:-moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
 	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
@@ -194,6 +190,7 @@ header {
 	text-decoration:none;
 	text-shadow:0px 0px 0px #810e05;
   float: right;
+  margin-bottom: 0px;
 }
 .demo_button:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #c62d1f));
@@ -218,6 +215,11 @@ header {
   float: left;
 }
 
+.instead_text {
+  color: #e14e4e;
+  text-decoration: none;
+}
+
 .top_session_form_text {
   margin: 0 0 15px;
   padding: 0;
@@ -226,6 +228,19 @@ header {
   font-weight: 300;
   color: lighten(#000000, 10%);
   font-family: monospace;
+}
+
+input[type="text"], input[type="password"] {
+  outline: 0;
+  background: darken(#FFFFFF, 5%);
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+    // +border-top-radius(3px)
+    // +border-bottom-radius(3px)
+    // +box-sizing(border-box)
+  font-size: 14px;
 }
 
 

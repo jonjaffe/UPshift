@@ -3,6 +3,7 @@ Upshift
 
 Heroku Link
 ------
+https://upshiftapp.herokuapp.com/
 
 Trello Link
 ------
