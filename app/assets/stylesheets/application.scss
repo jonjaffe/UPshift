@@ -257,3 +257,56 @@ input[type="text"], input[type="password"] {
 //     +border-bottom-radius(3px)
 //     +box-sizing(border-box)
 //     font-size: 14px
+
+// .car-index-item {
+//   width: 450px;
+// }
+//
+// .car-index-image {
+//   height: 50px;
+//   width: 80%;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
+//
+// .car-index-item:hover{
+//   height: 100px;
+//   width: 600px;
+// }
+
+.car-index-item {
+  position: relative;
+
+  border: 1px solid #333;
+  overflow: hidden;
+  width: 20.5%;
+  background-color: #FFFFFF;
+  height: 300px;
+  max-width: 100%;
+
+  -moz-transition: all .4s;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.car-index-item-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.car-index-item-text p {
+  text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+}
+
+.car-index-item:hover {
+  z-index: 2;
+  -moz-transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
+.car-index-image {
+  width: 100%;
+  height: 88%;
+}

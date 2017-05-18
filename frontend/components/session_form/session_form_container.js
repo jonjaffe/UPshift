@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { postSession, postUser } from '../../actions/session_actions';
+import { postSession, postUser, clearErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 
@@ -16,7 +16,8 @@ const mapDispatchToProps = (dispatch, { location }) => {
   const processForm = (formType === 'login') ? postSession : postUser;
   return {
     processForm: user => dispatch(processForm(user)),
-    formType
+    formType,
+    clearErrors: () => dispatch(clearErrors())
   };
 };
 

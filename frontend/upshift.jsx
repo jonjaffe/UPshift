@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import { postSession, postUser, deleteSession } from "./actions/session_actions"
 import configureStore from './store/store';
+import {getAllCars, getCar } from './actions/car_actions'
 
 
 document.addEventListener('DOMContentLoaded', () => {
   // window.postSession = postSession;
   // window.postUser = postUser;
+  window.getAllCars = getAllCars;
+  window.getCar = getCar;
   window.deleteSession = deleteSession;
   let store;
   if (window.session) {
