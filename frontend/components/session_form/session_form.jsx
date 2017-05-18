@@ -37,7 +37,7 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === 'login') {
-      return <div className="instead"><p>Not registered? </p><div className="instead_text"><Link to="/signup">Sign Up</Link></div></div>;
+      return <div className="instead"><p>Not registered? </p><div className="instead_text"><Link onClick={this.props.clearErrors} to="/signup">Sign Up</Link></div></div>;
     } else {
       return <div className="instead"><p>Already registered? </p><div className="instead_text"><Link to="/login">Log In</Link></div></div>;
     }
@@ -55,7 +55,7 @@ class SessionForm extends React.Component {
     return(
       <ul>
         {errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li key={`error-${i}`} className="session-form-errors">
             {error}
           </li>
         ))}

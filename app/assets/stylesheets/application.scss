@@ -14,11 +14,14 @@
  *= require_self
  */
 
+ @import url(https://fonts.googleapis.com/css?family=Roboto);
+
 .container {
   width: 100%;
 }
 
 .navbar_all_elements {
+  height: 10vh;
   background-color: #424242;
   display: flex;
   justify-content: space-between;
@@ -278,9 +281,9 @@ input[type="text"], input[type="password"] {
 .car-index-item {
   position: relative;
 
-  border: 1px solid #333;
+  border: .5px solid rgba(209, 206, 206, .5);
   overflow: hidden;
-  width: 20.5%;
+  width: 25%;
   background-color: #FFFFFF;
   height: 300px;
   max-width: 100%;
@@ -293,10 +296,18 @@ input[type="text"], input[type="password"] {
 .car-index-item-text {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .car-index-item-text p {
-  text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+  // text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+  font-family: 'Roboto';
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.car-index-item-make {
+  font-weight: bold;
 }
 
 .car-index-item:hover {
@@ -309,4 +320,58 @@ input[type="text"], input[type="password"] {
 .car-index-image {
   width: 100%;
   height: 88%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.session-form-errors {
+  color: red;
+}
+
+svg#heart {
+  height: 50px;
+  width: 50px;
+
+}
+
+#heart-path {
+  fill: white;
+  stroke: red;
+  stroke-width: 1px;
+  stroke-dasharray: 125;
+  stroke-dashoffset: -125;
+  stroke-linecap: butt;
+}
+
+#heart-path:hover {
+  border: #e14e4e;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 125;
+}
+
+// svg#heart:visited {
+//   outline-color: red;
+// }
+
+.all_cars {
+  display: flex;
+  flex-direction: row;
+  flex: 5 4 auto;
+  flex-wrap: wrap;
+}
+
+.car-index-item-price {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.search_placeholder {
+  height: 90vh;
+  width: 18%;
+  border: 2px solid blue;
+}
+
+.car_index {
+  display: flex;
 }

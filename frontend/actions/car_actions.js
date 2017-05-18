@@ -16,5 +16,5 @@ export const getAllCars = () => (dispatch) => {
 }
 
 export const getCar = (id) => (dispatch) => {
-  return CarUtil.getCar(id).then((res) => dispatch(getCar(res)))
+  return CarUtil.getCar(id).then((res) => dispatch(receiveCar(res)))
 }

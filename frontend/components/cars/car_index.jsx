@@ -14,6 +14,7 @@ class CarIndex extends React.Component {
     return (
       <div className="index">
         <section className="car_index">
+          <div className="search_placeholder">Search</div>
           <ul className="all_cars">
             {this.props.cars.map(car => <CarIndexItem car={car} key={car.id}/>)}
           </ul>

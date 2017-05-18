@@ -5,20 +5,24 @@ const numberWithCommas = (n) => {
   return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-const CarIndexItem = ({ car }) => (
+const CarIndexItem = (props) => (
   <li className="car-index-item">
-    <div className="car-index-image" style={{backgroundImage: `url(${car.image_url})`}}>
-      <div>heart</div>
-    </div>
-    <div className="car-index-item-text">
-      <p>
-        {car.make}
-        {car.model}
-        <br/>
-        {car.year} {car.mileage} miles
-      </p>
-      <p>${car.price}</p>
-    </div>
+    <Link to={`/cars/${props.car.id}`}>
+      <div className="car-index-image" style={{backgroundImage: `url(${props.car.image_url})`}}>
+        <svg viewBox="0 0 32 32" id="heart">
+          <path id="heart-path" d="M16,28.261c0,0-14-7.926-14-17.046c0-9.356,13.159-10.399,14-0.454c1.011-9.938,14-8.903,14,0.454
+            C30,20.335,16,28.261,16,28.261z"/>
+        </svg>
+      </div>
+      <div className="car-index-item-text">
+        <p>
+          <b>{props.car.make}</b> {props.car.model}
+          <br/>
+          <tt>{props.car.year}</tt> {props.car.mileage} miles
+        </p>
+        <p className="car-index-item-price">${props.car.price.toLocaleString()}</p>
+      </div>
+    </Link>
   </li>
 )
 
