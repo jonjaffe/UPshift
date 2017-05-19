@@ -127,7 +127,7 @@ header {
 
 
 
-.session_form_button {
+.session_form_button, .test-drive-button {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
 	background:-moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
 	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
@@ -138,7 +138,7 @@ header {
 	background-color:#e14e4e;
 	-moz-border-radius:18px;
 	-webkit-border-radius:18px;
-	border-radius:12px;
+	border-radius:9px;
 	border:1px solid #d02718;
 	display:inline-block;
 	cursor:pointer;
@@ -149,7 +149,7 @@ header {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #810e05;
 }
-.session_form_button:hover {
+.session_form_button:hover, .test-drive-button:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #c62d1f));
 	background:-moz-linear-gradient(top, #f24437 5%, #c62d1f 100%);
 	background:-webkit-linear-gradient(top, #f24437 5%, #c62d1f 100%);
@@ -159,7 +159,7 @@ header {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24437', endColorstr='#c62d1f',GradientType=0);
 	background-color:#f24437;
 }
-.session_form_button:active {
+.session_form_button:active, .test-drive-button:active {
 	position:relative;
 	top:1px;
 }
@@ -374,4 +374,167 @@ svg#heart {
 
 .car_index {
   display: flex;
+}
+
+.car-nav {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  /* position: relative; */
+  // bottom: -90px;
+  width: 100%;
+  align-items: center;
+}
+
+.car-nav-left {
+  display: flex;
+  align-items: center;
+  height: 150px;
+  min-width: 500px;
+  justify-content: space-around;
+  font-family: 'Roboto';
+  h1 {
+    font-weight: lighter;
+  }
+}
+
+.car-nav-right {
+  display: flex;
+  width: 300px;
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+
+.car-nav-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car-detail-yr {
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.car-nav-basic-info {
+  padding-left: 25px;
+  padding-right: 25px;
+  border-right: .5px solid rgba(209, 206, 206, .5);
+}
+
+tt {
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 1px;
+}
+
+.test-drive-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.test-drive-button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.test-drive-button:hover span {
+  padding-right: 18px;
+}
+
+.test-drive-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.car-nav-favorite-button {
+  background: #ffffff;
+  padding: 10px;
+  color: #e14e4e;
+  border: 1px solid #e14e4e;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.car-nav-price {
+  margin: .5em 0;
+  padding: .25em 0;
+  font-size: 250%;
+  font-weight: lighter;
+}
+
+.car-show {
+  display: flex;
+  flex-direction: column;
+}
+
+.car-show-detail {
+  border-top: 3px solid rgba(209, 206, 206, .5);
+  background:rgba(211,211,211,0.5);
+  text-transform: capitalize;
+  font-family: 'Roboto';
+  h2 {
+    font-weight: lighter;
+    margin-left: 60px;
+    display: block;
+    margin: auto;
+    max-width: 600px;
+    padding:5px;
+    width: 100%;
+  }
+}
+
+// .car-show-detail-table {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   p {
+//     margin-left: 40px;
+//   }
+// }
+
+
+.car-show-detail-table thead {
+  display: none;
+}
+
+.car-show-detail-table {
+  font-family: 'Roboto';
+}
+
+.left-table-text {
+  font-weight: bold;
+}
+
+.car-show-detail-table {
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+
+tr {
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+  border-bottom: 1px solid #22262e;
 }

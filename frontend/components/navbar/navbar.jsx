@@ -9,7 +9,7 @@ class Navbar extends React.Component {
   }
 
   deleteAndRedirect() {
-    this.props.deleteSession().then(() => history.push('/'))
+    this.props.deleteSession().then(() => this.props.history.push('/'))
   }
 
   render() {

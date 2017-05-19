@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const numberWithCommas = (n) => {
-  return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+// const numberWithCommas = (n) => {
+//   return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+// }
 
 const CarIndexItem = (props) => (
   <li className="car-index-item">
@@ -18,7 +18,7 @@ const CarIndexItem = (props) => (
         <p>
           <b>{props.car.make}</b> {props.car.model}
           <br/>
-          <tt>{props.car.year}</tt> {props.car.mileage} miles
+          <tt>{props.car.year}</tt> {props.car.mileage.toLocaleString()} miles
         </p>
         <p className="car-index-item-price">${props.car.price.toLocaleString()}</p>
       </div>
