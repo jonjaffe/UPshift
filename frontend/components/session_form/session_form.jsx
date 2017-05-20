@@ -78,7 +78,7 @@ class SessionForm extends React.Component {
         <form className="session_form_box" onSubmit={this.handleSubmit}>
           <div className="top_session_form_text">{this.writeTopAction()}</div>
           <br/>
-          <img src='http://i.cdn.turner.com/nba/nba/teamsites/images/legacy/celtics/CelticsLogo_History.gif' width={150} height={150} mode='fit' />
+          <img src='https://static.pexels.com/photos/141635/pexels-photo-141635.jpeg' width={150} height={150} mode='fit' />
           <br/>
           {this.renderErrors()}
           <br/>

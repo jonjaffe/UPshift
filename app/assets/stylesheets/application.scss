@@ -32,6 +32,10 @@
   /*margin-left: 0;
   margin-right: 0;
   margin-top: 0;*/
+  // position: fixed;
+  // top: 0;
+  // width: 100%;
+  // z-index: 10;
   text-decoration: none;
   h1, a {
     text-decoration: none;
@@ -61,8 +65,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
-  border-radius: 15px;
+  // border: 1px solid black;
+  // border-radius: 15px;
   margin: 10px auto 0px auto;
   padding: 10px;
   width: 30%;
@@ -366,7 +370,7 @@ svg#heart {
   font-size: 20px;
 }
 
-.search_placeholder {
+.search-form-container {
   height: 90vh;
   width: 18%;
   border: 2px solid blue;
@@ -379,7 +383,6 @@ svg#heart {
 .car-nav {
   display: flex;
   justify-content: space-between;
-  position: absolute;
   /* position: relative; */
   // bottom: -90px;
   width: 100%;
@@ -415,11 +418,16 @@ svg#heart {
   border: 1px solid grey;
   border-radius: 3px;
   padding: 3px;
+  margin-left: 12px;
+}
+
+.car-detail-miles {
+  margin-right: 12px;
 }
 
 .car-nav-basic-info {
   padding-left: 25px;
-  padding-right: 25px;
+  padding-right: 40px;
   border-right: .5px solid rgba(209, 206, 206, .5);
 }
 
@@ -480,7 +488,10 @@ tt {
   background:rgba(211,211,211,0.5);
   text-transform: capitalize;
   font-family: 'Roboto';
-  h2 {
+  display: flex;
+  flex-direction: column;
+
+  h3 {
     font-weight: lighter;
     margin-left: 60px;
     display: block;
@@ -488,6 +499,9 @@ tt {
     max-width: 600px;
     padding:5px;
     width: 100%;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    float: left;
   }
 }
 
@@ -505,10 +519,6 @@ tt {
   display: none;
 }
 
-.car-show-detail-table {
-  font-family: 'Roboto';
-}
-
 .left-table-text {
   font-weight: bold;
 }
@@ -523,6 +533,7 @@ tt {
   width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   animation: float 5s infinite;
+  font-family: 'Roboto';
 }
 
 tr {
@@ -537,4 +548,8 @@ tr:hover td {
   color:#FFFFFF;
   border-top: 1px solid #22262e;
   border-bottom: 1px solid #22262e;
+}
+
+.lower-case {
+  text-transform: lowercase;
 }

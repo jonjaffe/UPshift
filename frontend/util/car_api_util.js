@@ -5,3 +5,7 @@ export const getAllCars = () => {
 export const getCar = (id) => {
   return $.ajax({url: `api/cars/${id}`, method: 'GET'})
 }
+
+export const getSearchCars = (search) => {
+  return $.ajax({url: "/api/cars-search", method: 'GET', data: search})
+}

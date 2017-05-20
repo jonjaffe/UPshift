@@ -17,6 +17,19 @@ class CarShow extends React.Component {
   }
 
   render() {
+    const year = "Year"
+    const bodyStyle = "Body Style"
+    const mileage = "Mileage"
+    const transmission = "Transmission"
+    const drivetrain = "Drivetrain"
+    const formattedBodyStyle = () => {
+      if (this.props.car.body_style === 'suv') {
+        return 'SUV'
+      } else {
+        return this.props.car.body_style
+      }
+    }
+
     return (
       <div className="car-show">
         <img src={this.props.car.image_url} alt={this.props.car.model}/>
@@ -42,33 +55,33 @@ class CarShow extends React.Component {
           </div>
         </section>
         <section className="car-show-detail">
-          <h2>Details for {this.props.car.year} {this.props.car.make} {this.props.car.model}</h2>
+          <h3>Details <span className="lower-case">for</span> {this.props.car.year} {this.props.car.make} {this.props.car.model}</h3>
           <table className="car-show-detail-table responsive-table ">
             <thead>
               <tr>
-                Month
+                {bodyStyle}
               </tr>
             </thead>
             <tbody className="car-show-detail-table-data">
               <tr>
-                <td className="left-table-text">Year</td>
+                <td className="left-table-text">{year}</td>
                 <td>{this.props.car.year}</td>
               </tr>
               <tr>
-                <td className="left-table-text">Mileage</td>
-                <td>{this.props.car.mileage}</td>
+                <td className="left-table-text">{mileage}</td>
+                <td>{this.props.car.mileage.toLocaleString()}</td>
               </tr>
               <tr>
-                <td className="left-table-text">Transmission</td>
+                <td className="left-table-text">{transmission}</td>
                 <td>{this.props.car.transmission}</td>
               </tr>
               <tr>
-                <td className="left-table-text">Drivetrain</td>
+                <td className="left-table-text">{drivetrain}</td>
                 <td>{this.props.car.drivetrain.toUpperCase()}</td>
               </tr>
               <tr>
-                <td className="left-table-text">Body Style</td>
-                <td>{this.props.car.body_style}</td>
+                <td className="left-table-text">{bodyStyle}</td>
+                <td>{formattedBodyStyle()}</td>
               </tr>
             </tbody>
           </table>

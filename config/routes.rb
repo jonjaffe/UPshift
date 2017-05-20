@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resources :cars, only: [:index, :show]
     resource :session, only: [:create, :destroy]
+    get '/cars-search', to: 'cars#search'
   end
 
 end
