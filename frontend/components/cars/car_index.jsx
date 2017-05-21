@@ -11,6 +11,7 @@ class CarIndex extends React.Component {
     this.props.getAllCars()
   }
 
+
   render() {
     return (
       <div className="index">

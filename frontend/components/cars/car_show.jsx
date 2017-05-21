@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Carousel from 'nuka-carousel'
 
 class CarShow extends React.Component {
   constructor(props) {
@@ -85,6 +86,7 @@ class CarShow extends React.Component {
               </tr>
             </tbody>
           </table>
+
         </section>
       </div>
     )

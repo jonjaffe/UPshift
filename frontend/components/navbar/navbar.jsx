@@ -1,6 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Checkbox from 'material-ui/Checkbox';
+import ActionFavorite from 'material-ui/svg-icons/action/favorite';
+import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -13,6 +17,7 @@ class Navbar extends React.Component {
   }
 
   render() {
+
     if (this.props.loggedIn) {
       return (
         <div className="navbar_all_elements">

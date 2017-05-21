@@ -10,3 +10,6 @@ json.set! car.id do
   json.body_style car.body_style
   json.image_url car.image_url
 end
+
+#//jsonfavorite (current_user.favorited_cars.includes?(car))
+#if it

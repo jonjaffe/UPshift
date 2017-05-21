@@ -26,6 +26,13 @@ class Api::CarsController < ApplicationController
     render :index
   end
 
+  def create
+    @car = Car.find(params[:car_id])
+    Favorite.create(user_id: current_user.id, car_id: @car.id)
+
+    render :show
+  end
+
   private
   def search_params
     params.require(:search).permit(:price, :mileage, :body_style, :make, :transmission, :drivetrain)

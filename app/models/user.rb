@@ -5,6 +5,15 @@ class User < ApplicationRecord
   attr_reader :password
   before_validation :ensure_session_token
 
+  has_many :favorites,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: 'Favorite'
+
+  has_many :favorited_cars,
+  through: :favorites,
+  source: :car
+
   #ASSOCIATIONS TODO
 
   def password=(password)

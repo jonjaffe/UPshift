@@ -14,13 +14,12 @@ const CarIndexItem = (props) => (
             C30,20.335,16,28.261,16,28.261z"/>
         </svg>
       </div>
+      <span className='index-item-make'>{props.car.make}</span> {props.car.model}
       <div className="car-index-item-text">
         <p>
-          <b>{props.car.make}</b> {props.car.model}
-          <br/>
-          <tt>{props.car.year}</tt> {props.car.mileage.toLocaleString()} miles
+          <span className='index-item-year'>{props.car.year}</span> <span className='index-mileage'>{props.car.mileage.toLocaleString()} miles</span>
         </p>
-        <p className="car-index-item-price">${props.car.price.toLocaleString()}</p>
+        <p className="car-index-item-price" id='idx-item-price' >${props.car.price.toLocaleString()}</p>
       </div>
     </Link>
   </li>
