@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "static_pages#root"
 
   namespace :api, defaults: {format: :json} do
-    resources :users, only: [:create]
+    resources :users, only: [:create, :show]
     resources :cars, only: [:index, :show, :create]
     resource :session, only: [:create, :destroy]
     get '/cars-search', to: 'cars#search'

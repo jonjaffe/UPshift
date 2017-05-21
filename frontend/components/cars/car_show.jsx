@@ -33,7 +33,7 @@ class CarShow extends React.Component {
 
     return (
       <div className="car-show">
-        <img src={this.props.car.image_url} alt={this.props.car.model}/>
+        <img src={this.props.car.image_url} alt={this.props.car.model} className='car-show-image' />
         <section className="car-nav">
           <div className="car-nav-left">
             <div className="car-nav-basic-info">
@@ -49,7 +49,8 @@ class CarShow extends React.Component {
             </div>
           </div>
           <div className="car-nav-right">
-            <button className="car-nav-favorite-button"><p className="car-nav-favorite-icon">♥</p></button>
+            {/*}<button className="car-nav-favorite-button"><p className="car-nav-favorite-icon">♥</p></button>*/}
+            <button onClick={() => this.props.postFavoriteCar(this.props.car.id)}>test</button>
             <button className="test-drive-button">
               <span className="car-nav-test-drive-text">Test Drive</span>
             </button>

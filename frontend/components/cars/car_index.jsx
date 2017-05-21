@@ -18,7 +18,7 @@ class CarIndex extends React.Component {
         <section className="car_index">
           <SearchFormContainer count={this.props.cars.length} />
           <ul className="all_cars">
-            {this.props.cars.map(car => <CarIndexItem car={car} key={car.id} />)}
+            {this.props.cars.map(car => <CarIndexItem car={car} key={car.id} postFavoriteCar={this.props.postFavoriteCar} />)}
           </ul>
         </section>
       </div>

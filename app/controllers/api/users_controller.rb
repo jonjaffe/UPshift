@@ -11,6 +11,11 @@ class Api::UsersController < ApplicationController
 		end
 	end
 
+  def show
+    @user = current_user
+    render "api/users/show", locals: {user: @user}
+  end
+
 	private
 
 	def user_params

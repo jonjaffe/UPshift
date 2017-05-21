@@ -23,11 +23,11 @@ class Navbar extends React.Component {
         <div className="navbar_all_elements">
           <div className="navbar_left">
             <header>
-              <Link to="/"><h1>UpShift</h1></Link>
+              <Link to="/"><h1><span className='up'>UP</span>shift</h1></Link>
             </header>
           </div>
           <div className="navbar_right">
-            <span><Link to={`/favorites/${this.props.currentUser.id}`}><img className="logged_in_heart" src="https://i.stack.imgur.com/iBCpb.png"/></Link></span>
+            <span><Link to={`/favorites`}><img className="logged_in_heart" src="https://i.stack.imgur.com/iBCpb.png"/></Link></span>
             &nbsp;
             <span><button onClick={this.deleteAndRedirect}>Log Out</button></span>
           </div>
@@ -38,7 +38,7 @@ class Navbar extends React.Component {
         <div className="navbar_all_elements">
           <div className="navbar_left">
             <header>
-              <Link to="/"><h1>UpShift</h1></Link>
+              <Link to="/"><h1><span className='up'>UP</span>shift</h1></Link>
             </header>
           </div>
           <div className="navbar_right">

@@ -19,6 +19,10 @@
  @import url('https://fonts.googleapis.com/css?family=Muli:200');
  @import url('https://fonts.googleapis.com/css?family=Titillium+Web:200');
  @import url('https://fonts.googleapis.com/css?family=Quicksand');
+ @import url('https://fonts.googleapis.com/css?family=Antic+Slab');
+ @import url('https://fonts.googleapis.com/css?family=Neuton');
+
+
 
 
 
@@ -116,8 +120,12 @@
 
 header {
   margin-left: 10px;
+  font-family: 'Neuton', serif;
 }
 
+.up {
+  color: #e14e4e;
+}
 
 
 .session_form_button, .test-drive-button, .search-form-submit-button {
@@ -234,43 +242,11 @@ input[type="text"], input[type="password"] {
   border: 0;
   margin: 0 0 15px;
   padding: 15px;
-    // +border-top-radius(3px)
-    // +border-bottom-radius(3px)
-    // +box-sizing(border-box)
   font-size: 14px;
 }
 
 
-// input[type="text"] {
-//
-// }
-//     outline: 0
-//     background: darken($white, 5%)
-//     width: 100%
-//     border: 0
-//     margin: 0 0 15px
-//     padding: 15px
-//     +border-top-radius(3px)
-//     +border-bottom-radius(3px)
-//     +box-sizing(border-box)
-//     font-size: 14px
 
-// .car-index-item {
-//   width: 450px;
-// }
-//
-// .car-index-image {
-//   height: 50px;
-//   width: 80%;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: center;
-// }
-//
-// .car-index-item:hover{
-//   height: 100px;
-//   width: 600px;
-// }
 
 .car-index-item {
   position: relative;
@@ -327,7 +303,7 @@ input[type="text"], input[type="password"] {
 }
 
 .search-form-current-value {
-  margin-left: 10px;
+  margin-left: 15px;
   font-family: 'Quicksand', sans-serif;
 
 }
@@ -381,6 +357,7 @@ svg#heart {
   flex-direction: row;
   flex: 5 4 auto;
   flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 .car-index-item-price {
@@ -577,7 +554,7 @@ tr:hover td {
 
 input[type="range"]{
   -webkit-appearance:none;
-  width:160px;
+  width:90%;
   height:20px;
   background: linear-gradient(to right, #424242, #e5e5e5 100%);
   background-size: 210px 3px;
@@ -585,7 +562,7 @@ input[type="range"]{
   background-repeat:no-repeat;
   overflow:hidden;
   outline: none;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 
@@ -631,5 +608,12 @@ input[type="range"]::-webkit-slider-thumb:after{
 }
 
 .search-form-submit-button {
-  margin-left: 115px;
+  margin: auto;
 }
+
+// .search-form-box {
+//   display: flex;
+//   flex-direction: column;
+//   // justify-content: flex-start;
+//   align-items: flex-start;
+// }

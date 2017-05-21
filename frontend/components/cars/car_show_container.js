@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import CarShow from './car_show'
-import {getCar} from '../../actions/car_actions'
+import {getCar, postFavoriteCar} from '../../actions/car_actions'
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -8,7 +8,8 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return {getCar: (id) => dispatch(getCar(id))};
+  return {getCar: (id) => dispatch(getCar(id)),
+    postFavoriteCar: (id) => dispatch(postFavoriteCar(id))};
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CarShow)

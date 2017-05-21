@@ -50,8 +50,9 @@ class SearchForm extends React.Component {
 
   // <button onClick={this.resetField} value={this.state.body_style}>{this.state.body_style}</button>
   render () {
-    // const styleTop = this.state.body_style instanceof Array ? undefined : <div>{this.state.body_style.toUpperCase()}</div>;
-    const arr = [];
+    const styleTop = this.state.body_style instanceof Array ? undefined : <div>{this.state.body_style.toUpperCase()}</div>;
+    const makeTop = this.state.make instanceof Array ? undefined : <div>{this.state.make.toUpperCase()}</div>
+    // const arr = [];
     // for (let i = 0; i < this.state.body_style.length; i++) {
     //   let style = this.state.body_style[i];
     //   arr.push(<li className='search-form-button'><button onClick={this.update('body_style')} value={style}>{style.toUpperCase()}</button></li>)
@@ -63,6 +64,8 @@ class SearchForm extends React.Component {
             <p className='search-form-top-text-count'>{this.props.count} matches</p>
             <button onClick={this.resetForm} className='search-reset-button'>Clear</button>
           </div>
+          {/*{styleTop}
+          {makeTop}*/}
           <div className="search-form-header">
             MAX PRICE
           </div>
@@ -123,7 +126,7 @@ class SearchForm extends React.Component {
             <li className='search-form-button'><button onClick={this.update('drivetrain')} value='rwd'>RWD</button></li>
           </ul>
           <br/>
-        <input type='submit' className='search-form-submit-button' value='Find Cars'></input>
+        {/*<input type='submit' className='search-form-submit-button' value='Find Cars'></input>*/}
         </form>
       </div>
     )
