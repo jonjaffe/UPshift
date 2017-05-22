@@ -33,6 +33,14 @@ class Api::CarsController < ApplicationController
     render :show
   end
 
+  def destroy
+    @car = Car.find(params[:car_id])
+    @favorite = Favorite.find_by(user_id: current_user.id, car_id: @car.id)
+    @favorite.destroy
+
+    render :show
+  end
+
   private
   def search_params
     params.require(:search).permit(:price, :mileage, :body_style, :make, :transmission, :drivetrain)

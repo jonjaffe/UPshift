@@ -37,8 +37,7 @@ export const postSession = (user) => dispatch => {
 };
 
 const blankUser = {
-  currentUser: {id: null, email: null, favorites: []},
-  errors: []
+  id: null, email: null, favorites: []
 };
 
 export const deleteSession = () => dispatch => {

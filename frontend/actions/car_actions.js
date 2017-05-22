@@ -3,6 +3,7 @@ import * as CarUtil from '../util/car_api_util'
 export const RECEIVE_CAR = "RECEIVE_CAR"
 export const RECEIVE_ALL_CARS = "RECEIVE_ALL_CARS"
 export const RECEIVE_FAVORITE_CAR = 'RECEIVE_FAVORITE_CAR'
+export const REMOVE_FAVORITE_CAR = 'REMOVE_FAVORITE_CAR'
 
 export const receiveAllCars = (cars) => {
   return {type: RECEIVE_ALL_CARS, cars: cars}
@@ -14,6 +15,10 @@ export const receiveCar = (car) => {
 
 export const receiveFavoriteCar = (car) => {
   return {type: RECEIVE_FAVORITE_CAR, car: car }
+}
+
+export const removeFavoriteCar = (car) => {
+  return {type: REMOVE_FAVORITE_CAR, car: car}
 }
 
 export const getAllCars = () => (dispatch) => {
@@ -30,4 +35,8 @@ export const getSearchCars = (searchObj) => (dispatch) => {
 
 export const postFavoriteCar = (car_id) => (dispatch) => {
   return CarUtil.postFavoriteCar(car_id).then((car) => dispatch(receiveFavoriteCar(car)))
+}
+
+export const deleteFavoriteCar = (car_id) => (dispatch) => {
+  return CarUtil.deleteFavoriteCar(car_id).then((car) => dispatch(removeFavoriteCar(car)))
 }

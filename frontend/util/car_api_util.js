@@ -13,3 +13,7 @@ export const getSearchCars = (search) => {
 export const postFavoriteCar = (id) => {
   return $.ajax({url: '/api/cars', method: 'POST', data: {car_id: id}})
 }
+
+export const deleteFavoriteCar = (id) => {
+  return $.ajax({url: `api/cars/${id}`, method: 'DELETE', data: {car_id: id}})
+}

@@ -5,6 +5,7 @@ import Carousel from 'nuka-carousel'
 class CarShow extends React.Component {
   constructor(props) {
     super(props)
+    this.favoriteButton = this.favoriteButton.bind(this)
   }
 
   componentDidMount() {
@@ -14,6 +15,14 @@ class CarShow extends React.Component {
   componentWillReceiveProps(newProps) {
     if (newProps.match.params.carId !== this.props.match.params.carId) {
       this.props.getCar(newProps.match.params.carId)
+    }
+  }
+
+  favoriteButton() {
+    if (!!this.props.favorites[this.props.car.id]) {
+      return (<button onClick={() => this.props.deleteFavoriteCar(this.props.car.id)}>unfav</button>)
+    } else {
+      return (<button onClick={() => this.props.postFavoriteCar(this.props.car.id)}>fav</button>)
     }
   }
 
@@ -49,8 +58,7 @@ class CarShow extends React.Component {
             </div>
           </div>
           <div className="car-nav-right">
-            {/*}<button className="car-nav-favorite-button"><p className="car-nav-favorite-icon">♥</p></button>*/}
-            <button onClick={() => this.props.postFavoriteCar(this.props.car.id)}>fav</button>
+            {this.favoriteButton()}
             <button className="test-drive-button">
               <span className="car-nav-test-drive-text">Test Drive</span>
             </button>
@@ -94,3 +102,4 @@ class CarShow extends React.Component {
   }
 }
 export default CarShow;
+// {/*}<button className="car-nav-favorite-button"><p className="car-nav-favorite-icon">♥</p></button>*/}
