@@ -1,10 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-// const numberWithCommas = (n) => {
-//   return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-// }
-
 const CarIndexItem = (props) => (
   <li className="car-index-item">
     <Link to={`/cars/${props.car.id}`}>

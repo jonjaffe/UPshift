@@ -36,7 +36,12 @@ export const postSession = (user) => dispatch => {
     error => dispatch(receiveErrors(error.responseJSON)));
 };
 
+const blankUser = {
+  currentUser: {id: null, email: null, favorites: []},
+  errors: []
+};
+
 export const deleteSession = () => dispatch => {
   return SessionUtil.deleteSession()
-    .then(res => dispatch(receiveCurrentUser(null)));
+    .then(res => dispatch(receiveCurrentUser(blankUser)));
 };

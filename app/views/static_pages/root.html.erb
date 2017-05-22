@@ -2,7 +2,7 @@
   <% if is_logged_in? %>
     window.session = <%= render(
       "api/users/current_user.json.jbuilder",
-      user: current_user
+      user: current_user, favorites: current_user.favorited_cars
     ).html_safe %>
   <% end %>
 </script>

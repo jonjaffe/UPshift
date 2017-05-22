@@ -50,7 +50,7 @@ class CarShow extends React.Component {
           </div>
           <div className="car-nav-right">
             {/*}<button className="car-nav-favorite-button"><p className="car-nav-favorite-icon">♥</p></button>*/}
-            <button onClick={() => this.props.postFavoriteCar(this.props.car.id)}>test</button>
+            <button onClick={() => this.props.postFavoriteCar(this.props.car.id)}>fav</button>
             <button className="test-drive-button">
               <span className="car-nav-test-drive-text">Test Drive</span>
             </button>

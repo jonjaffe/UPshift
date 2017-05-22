@@ -86,6 +86,15 @@ class SearchForm extends React.Component {
           <br/>
           <input type='range' value={this.state.mileage} onChange={this.update('mileage')} className='search-form-slider' min='0' max='100000' step='5000' />
           <br/>
+          <input id="toggle" type="checkbox" />
+          <label for="toggle" id='search-toggle' className='search-form-header'>BODY STYLE</label>
+          <div id="expand">
+            <ul className='search-form-list'>
+              <li className='search-form-button'><button onClick={this.update('body_style')} value='convertible'>Convertible</button></li>
+              <li className='search-form-button'><button onClick={this.update('body_style')} value='coupe'>Coupe</button></li>
+              <li className='search-form-button'><button onClick={this.update('body_style')} value='suv'>SUV</button></li>
+            </ul>
+          </div>
           <div className='search-form-header'>
             BODY STYLE
           </div>

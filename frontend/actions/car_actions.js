@@ -28,6 +28,6 @@ export const getSearchCars = (searchObj) => (dispatch) => {
   return CarUtil.getSearchCars(searchObj).then((cars) => dispatch(receiveAllCars(cars)))
 }
 
-export const postFavoriteCar = (id) => (dispatch) => {
-  return CarUtil.postFavoriteCar(id).then((car) => dispatch(receiveFavoriteCar(car)))
+export const postFavoriteCar = (car_id) => (dispatch) => {
+  return CarUtil.postFavoriteCar(car_id).then((car) => dispatch(receiveFavoriteCar(car)))
 }
