@@ -293,6 +293,25 @@ input[type="text"], input[type="password"] {
   margin-top: 15px;
 }
 
+.search-form-header-top {
+  margin-top: 25px;
+}
+
+.search-form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 90vh;
+    width: 18%;
+    border-right: .5px solid rgba(209, 206, 206, .5);
+    border-bottom: .5px solid rgba(209, 206, 206, .5);
+
+}
+
+.search-form-list {
+  width: 100%;
+}
+
 .search-form-button {
   margin-left: 0px;
   font-family: 'Roboto', sans-serif;
@@ -300,6 +319,10 @@ input[type="text"], input[type="password"] {
   padding-left: 10px;
   border-bottom: .5px solid rgba(209, 206, 206, .5);
 
+}
+
+.search-form-button:hover {
+  color: #e14e4e;
 }
 
 .search-form-current-value {
@@ -367,15 +390,7 @@ svg#heart {
   margin-right: 14px;
 }
 
-.search-form-container {
-  height: 90vh;
-  width: 18%;
-  border-right: .5px solid rgba(209, 206, 206, .5);
-  border-bottom: .5px solid rgba(209, 206, 206, .5);
-  display: flex;
-  flex-direction: column;
-  // align-items: center;
-}
+
 
 .car_index {
   display: flex;
