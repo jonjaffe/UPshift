@@ -274,8 +274,8 @@ input[type="text"], input[type="password"] {
 .car-index-item-text p {
   // text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
   font-family: 'Roboto', sans-serif;
-  margin-left: 4px;
-  margin-right: 4px;
+  // margin-left: 4px;
+  // margin-right: 4px;
   font-weight: 100;
 }
 
@@ -313,27 +313,31 @@ input[type="text"], input[type="password"] {
 
 }
 
+.search-form-box {
+  padding-left: 10px;
+}
+
 .search-form-list {
   width: 100%;
   margin-top: 15px;
 }
 
-.search-form-button {
-  font-weight: 100;
-  margin-left: 0px;
-  font-family: 'Roboto', sans-serif;
-  background: #f7f7f8;
-  padding-left: 10px;
-  border-bottom: .5px solid rgba(209, 206, 206, .5);
-
-}
+// .search-form-button {
+//   font-weight: 100;
+//   margin-left: 0px;
+//   font-family: 'Roboto', sans-serif;
+//   background: #f7f7f8;
+//   padding-left: 10px;
+//   border-bottom: .5px solid rgba(209, 206, 206, .5);
+//
+// }
 
 .search-form-button:hover {
   color: #e14e4e;
 }
 
 .search-form-current-value {
-  margin-left: 15px;
+  // margin-left: 15px;
   font-family: 'Quicksand', sans-serif;
 
 }
@@ -347,7 +351,7 @@ input[type="text"], input[type="password"] {
 
 .car-index-image {
   width: 100%;
-  height: 88%;
+  height: 100%;
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -395,7 +399,7 @@ svg#heart {
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  margin-right: 14px;
+  margin-right: 10px;
 }
 
 
@@ -588,7 +592,7 @@ input[type="range"]{
   background-repeat:no-repeat;
   overflow:hidden;
   outline: none;
-  margin-left: 5px;
+  // margin-left: 5px;
 }
 
 
@@ -625,9 +629,7 @@ input[type="range"]::-webkit-slider-thumb:after{
   margin-bottom: 7px;
   .search-reset-button {
     color: #e14e4e;
-  }
-  .search-reset-button, .search-form-top-text-count {
-    margin: 3px 3px;
+    padding-right: 10px;
   }
 }
 
@@ -676,4 +678,11 @@ input[type="range"]::-webkit-slider-thumb:after{
 .car-index-unfavorite-button, .car-index-favorite-button {
   position:absolute; left:8px; top:8px;
 
+}
+
+.car-index-text-all {
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+    padding-left: 10px;
 }
