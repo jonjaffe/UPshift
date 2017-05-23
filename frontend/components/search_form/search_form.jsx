@@ -1,4 +1,5 @@
 import React from 'react'
+import Collapsible from 'react-collapsible'
 
 class SearchForm extends React.Component {
   constructor(props) {
@@ -85,46 +86,36 @@ class SearchForm extends React.Component {
           <br/>
           <input type='range' value={this.state.mileage} onChange={this.update('mileage')} className='search-form-slider' min='0' max='100000' step='5000' />
           <br/>
-          <div className='search-form-header'>
-            BODY STYLE
-          </div>
+            <Collapsible trigger="BODY STYLE" className='search-form-header' openedClassName='search-form-header' transitionTime={250} >
+              <ul className='search-form-list'>
+                <li className='search-form-button'><button onClick={this.update('body_style')} value='convertible'>Convertible</button></li>
+                <li className='search-form-button'><button onClick={this.update('body_style')} value='coupe'>Coupe</button></li>
+                <li className='search-form-button'><button onClick={this.update('body_style')} value='suv'>SUV</button></li>
+              </ul>
+          </Collapsible>
           <br/>
-          <ul className='search-form-list collapsible'>
-
-            <li className='search-form-button'><button onClick={this.update('body_style')} value='convertible'>Convertible</button></li>
-            <li className='search-form-button'><button onClick={this.update('body_style')} value='coupe'>Coupe</button></li>
-            <li className='search-form-button'><button onClick={this.update('body_style')} value='suv'>SUV</button></li>
-          </ul>
+          <Collapsible trigger="MAKE" className='search-form-header' openedClassName='search-form-header' transitionTime={250} >
+            <ul className='search-form-list'>
+              <li className='search-form-button'><button onClick={this.update('make')} value='Chevrolet'>Chevrolet</button></li>
+              <li className='search-form-button'><button onClick={this.update('make')} value='Porsche'>Porsche</button></li>
+              <li className='search-form-button'><button onClick={this.update('make')} value='Tesla'>Tesla</button></li>
+            </ul>
+          </Collapsible>
           <br/>
-          <div className='search-form-header'>
-            MAKE
-          </div>
+          <Collapsible trigger="TRANSMISSION" className='search-form-header' openedClassName='search-form-header' transitionTime={250} >
+            <ul className='search-form-list'>
+              <li className='search-form-button'><button onClick={this.update('transmission')} value='automatic'>Automatic</button></li>
+              <li className='search-form-button'><button onClick={this.update('transmission')} value='manual'>Manual</button></li>
+            </ul>
+          </Collapsible>
           <br/>
-          <ul className='search-form-list'>
-            <li className='search-form-button'><button onClick={this.update('make')} value='Chevrolet'>Chevrolet</button></li>
-            <li className='search-form-button'><button onClick={this.update('make')} value='Porsche'>Porsche</button></li>
-            <li className='search-form-button'><button onClick={this.update('make')} value='Tesla'>Tesla</button></li>
-          </ul>
-          <br/>
-          <div className='search-form-header'>
-            TRANSMISSION
-          </div>
-          <br/>
-          <ul className='search-form-list'>
-            <li className='search-form-button'><button onClick={this.update('transmission')} value='automatic'>Automatic</button></li>
-            <li className='search-form-button'><button onClick={this.update('transmission')} value='manual'>Manual</button></li>
-          </ul>
-          <br/>
-          <div className='search-form-header'>
-            DRIVETRAIN
-          </div>
-          <br/>
-          <ul className='search-form-list'>
-            <li className='search-form-button'><button onClick={this.update('drivetrain')} value='4wd'>4WD</button></li>
-            <li className='search-form-button'><button onClick={this.update('drivetrain')} value='awd'>AWD</button></li>
-            <li className='search-form-button'><button onClick={this.update('drivetrain')} value='rwd'>RWD</button></li>
-          </ul>
-          <br/>
+          <Collapsible trigger="DRIVETRAIN" className='search-form-header' openedClassName='search-form-header' transitionTime={250} >
+            <ul className='search-form-list'>
+              <li className='search-form-button'><button onClick={this.update('drivetrain')} value='4wd'>4WD</button></li>
+              <li className='search-form-button'><button onClick={this.update('drivetrain')} value='awd'>AWD</button></li>
+              <li className='search-form-button'><button onClick={this.update('drivetrain')} value='rwd'>RWD</button></li>
+            </ul>
+          </Collapsible>
         {/*<input type='submit' className='search-form-submit-button' value='Find Cars'></input>*/}
         </form>
     )

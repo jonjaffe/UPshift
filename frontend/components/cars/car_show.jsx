@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Carousel from 'nuka-carousel'
+import { Link } from 'react-router-dom'
 
 class CarShow extends React.Component {
   constructor(props) {

@@ -36,6 +36,7 @@
     "materialize-css": "^0.98.2",
     "nuka-carousel": "^2.0.4",
     "react": "^15.5.4",
+    "react-collapsible": "^1.4.0",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
     "react-router-dom": "^4.1.1",

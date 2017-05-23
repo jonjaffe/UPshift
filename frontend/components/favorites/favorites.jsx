@@ -1,4 +1,6 @@
-import React from 'react';
+import React from 'react'
+import CarIndexItem from '../cars/car_index_item'
+
 
 class Favorites extends React.Component {
   constructor(props) {
@@ -8,6 +10,9 @@ class Favorites extends React.Component {
   render() {
     return (
       <div>
+        <ul className='all-favorite-cars'>
+          {this.props.favorites.map(car => <CarIndexItem car={car} key={car.id} />)}
+        </ul>
         {JSON.stringify(this.props.favorites)}
       </div>
     )

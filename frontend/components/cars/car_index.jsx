@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import CarIndexItem from './car_index_item'
 import SearchFormContainer from '../search_form/search_form_container'
 
