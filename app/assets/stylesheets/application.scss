@@ -34,7 +34,7 @@
 }
 
 .navbar_all_elements {
-  height: 10vh;
+  height: 50px;
   background-color: #424242;
   display: flex;
   justify-content: space-between;
@@ -259,6 +259,7 @@ input[type="text"], input[type="password"] {
   background-color: #FFFFFF;
   height: 300px;
   max-width: 100%;
+  padding: 10px;
 
   -moz-transition: all .4s;
   -webkit-transition: all .4s;
@@ -365,6 +366,7 @@ svg#heart {
 }
 
 #heart-path {
+  border: gray;
   fill: white;
   stroke: red;
   stroke-width: 1px;
@@ -663,4 +665,8 @@ input[type="range"]::-webkit-slider-thumb:after{
 .Collapsible__trigger:hover {
   color: #e14e4e;
   cursor: pointer;
+}
+
+.car-show-image-container {
+  max-height: 590px;
 }

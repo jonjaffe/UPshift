@@ -41,7 +41,10 @@ class CarShow extends React.Component {
 
     return (
       <div className="car-show">
-        <img src={this.props.car.image_url} alt={this.props.car.model} className='car-show-image' />
+        <div className='car-show-image-container'>
+
+          <img src={this.props.car.image_url} alt={this.props.car.model} className='car-show-image' />
+        </div>
         <section className="car-nav">
           <div className="car-nav-left">
             <div className="car-nav-basic-info">

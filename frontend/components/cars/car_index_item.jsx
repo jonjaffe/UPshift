@@ -5,10 +5,7 @@ const CarIndexItem = (props) => (
   <li className="car-index-item">
     <Link to={`/cars/${props.car.id}`}>
       <div className="car-index-image" style={{backgroundImage: `url(${props.car.image_url})`}}>
-        <svg viewBox="0 0 32 32" id="heart">
-          <path id="heart-path" d="M16,28.261c0,0-14-7.926-14-17.046c0-9.356,13.159-10.399,14-0.454c1.011-9.938,14-8.903,14,0.454
-            C30,20.335,16,28.261,16,28.261z"/>
-        </svg>
+        <button className="car-index-favorite-button" onClick={() => props.favorited ? props.deleteFavoriteCar(props.car.id) : props.postFavoriteCar(props.car.id)}><i className={`fa fa-heart${props.favorited ? "" : "-o"}`} aria-hidden="true"></i></button>
       </div>
       <span className='index-item-make'>{props.car.make}</span> {props.car.model}
       <div className="car-index-item-text">
@@ -22,3 +19,4 @@ const CarIndexItem = (props) => (
 )
 
 export default CarIndexItem;
+// <button className='car-index-favorite-button' onClick={props.postFavoriteCar(props.car.id)}><i className="fa fa-heart-o" aria-hidden="true"></i></button>
