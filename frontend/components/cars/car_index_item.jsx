@@ -22,14 +22,14 @@ class CarIndexItem extends React.Component {
           {this.favoriteButton()}
           <Link to={`/cars/${this.props.car.id}`}>
             <div className="car-index-image" style={{backgroundImage: `url(${this.props.car.image_url})`}}>
-            </div>
-            <span className='index-item-make'>{this.props.car.make}</span> {this.props.car.model}
+              <div className='car-index-item-text-top'><span className='index-item-make'>{this.props.car.make}</span> {this.props.car.model}</div>
               <div className="car-index-item-text">
                 <p>
                   <span className='index-item-year'>{this.props.car.year}</span> <span className='index-mileage'>{this.props.car.mileage.toLocaleString()} miles</span>
                 </p>
                 <p className="car-index-item-price" id='idx-item-price' >${this.props.car.price.toLocaleString()}</p>
               </div>
+            </div>
             </Link>
           </li>
 
