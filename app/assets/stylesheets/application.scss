@@ -21,6 +21,8 @@
  @import url('https://fonts.googleapis.com/css?family=Quicksand');
  @import url('https://fonts.googleapis.com/css?family=Antic+Slab');
  @import url('https://fonts.googleapis.com/css?family=Neuton');
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
 
 
 
@@ -289,9 +291,9 @@ input[type="text"], input[type="password"] {
 
 }
 
-.search-form-header {
-  margin-top: 15px;
-}
+// .search-form-header {
+//   margin-top: 15px;
+// }
 
 .search-form-header-top {
   margin-top: 25px;
@@ -570,7 +572,7 @@ tr:hover td {
 input[type="range"]{
   -webkit-appearance:none;
   width:90%;
-  height:20px;
+  height:22px;
   background: linear-gradient(to right, #424242, #e5e5e5 100%);
   background-size: 210px 3px;
   background-position:center;
@@ -584,7 +586,7 @@ input[type="range"]{
 input[type="range"]::-webkit-slider-thumb{
   -webkit-appearance:none;
   width:30px;
-  height:20px;
+  height:19px;
   background:white;
   border: .25px solid #c5c5c5;
   position:relative;
@@ -632,3 +634,11 @@ input[type="range"]::-webkit-slider-thumb:after{
 //   // justify-content: flex-start;
 //   align-items: flex-start;
 // }
+
+.car-show-favorite-button {
+  margin-right: 10px;
+  border: .5px solid #e14e4e;
+  color: #e14e4e;
+  padding: 8px;
+  border-radius: 2.5px;
+}
