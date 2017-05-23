@@ -60,9 +60,11 @@ class SearchForm extends React.Component {
     // }
     return (
         <form className="search-form-box" onSubmit={this.handleSubmit}>
-          <div className='search-form-top-text'>
-            <p className='search-form-top-text-count'>{this.props.count} matches</p>
-            <button onClick={this.resetForm} className='search-reset-button'>Clear</button>
+          <div className='search-form-top-text-container'>
+            <div className='search-form-top-text'>
+              <p className='search-form-top-text-count'>{this.props.count} matches</p>
+              <button onClick={this.resetForm} className='search-reset-button'>Clear</button>
+            </div>
           </div>
           {/*{styleTop}
           {makeTop}*/}

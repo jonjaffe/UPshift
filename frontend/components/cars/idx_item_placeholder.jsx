@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 class CarIndexItem extends React.Component {
   constructor(props) {
     super(props)
+    console.log(this.props)
     this.favoriteButton = this.favoriteButton.bind(this)
   }
 
   favoriteButton() {
-    console.log(this.props)
     if (this.props.favorited) {
       return (<button className='car-show-unfavorite-button' onClick={() => this.props.deleteFavoriteCar(this.props.car.id)}><i className="fa fa-heart" aria-hidden="true"></i></button>)
     } else {

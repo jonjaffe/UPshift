@@ -5,7 +5,7 @@ import { getAllCars, getCar, postFavoriteCar, deleteFavoriteCar } from '../../ac
 
 const mapStateToProps = (state) => {
   return {cars: asArray(state.cars),
-  favorites: asArray(state.session.currentUser.favorites)}
+  favorites: state.session.currentUser.favorites}
 }
 
 const mapDispatchToProps = (dispatch) => {

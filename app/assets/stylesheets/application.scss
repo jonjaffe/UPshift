@@ -287,7 +287,6 @@ input[type="text"], input[type="password"] {
 
 .index-item-make, .search-form-header {
   font-weight: 400;
-  margin-left: 10px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -669,4 +668,8 @@ input[type="range"]::-webkit-slider-thumb:after{
 
 .car-show-image-container {
   max-height: 590px;
+}
+
+.search-form-top-text-container {
+  width: 100%;
 }

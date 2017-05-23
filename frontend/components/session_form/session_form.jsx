@@ -44,7 +44,6 @@ class SessionForm extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    console.log(this.props.clearErrors);
     if (this.props.formType !== newProps.formType) {
       this.props.clearErrors()
     }
