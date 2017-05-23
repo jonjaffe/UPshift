@@ -13,7 +13,6 @@ class CarIndex extends React.Component {
 
 
   render() {
-    debugger
     return (
       <div className="index">
         <section className="car_index">

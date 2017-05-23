@@ -8,11 +8,10 @@ class CarIndexItem extends React.Component {
   }
 
   favoriteButton() {
-    console.log(this.props)
     if (this.props.favorited) {
-      return (<button className='car-show-unfavorite-button' onClick={() => this.props.deleteFavoriteCar(this.props.car.id)}><i className="fa fa-heart" aria-hidden="true"></i></button>)
+      return (<button className='car-index-unfavorite-button' onClick={() => this.props.deleteFavoriteCar(this.props.car.id)}><i className="fa fa-heart" aria-hidden="true"></i></button>)
     } else {
-      return (<button className='car-show-favorite-button' onClick={() => this.props.postFavoriteCar(this.props.car.id)}><i className="fa fa-heart-o" aria-hidden="true"></i></button>)
+      return (<button className='car-index-favorite-button' onClick={() => this.props.postFavoriteCar(this.props.car.id)}><i className="fa fa-heart-o" aria-hidden="true"></i></button>)
     }
   }
 
@@ -20,9 +19,9 @@ class CarIndexItem extends React.Component {
     return (
 
         <li className="car-index-item">
+          {this.favoriteButton()}
           <Link to={`/cars/${this.props.car.id}`}>
             <div className="car-index-image" style={{backgroundImage: `url(${this.props.car.image_url})`}}>
-              {this.favoriteButton()}
             </div>
             <span className='index-item-make'>{this.props.car.make}</span> {this.props.car.model}
               <div className="car-index-item-text">
