@@ -370,6 +370,14 @@ input[type="text"], input[type="password"] {
   background-position: center;
 }
 
+.car-show-image {
+  width: 100%;
+  height: auto;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .session-form-errors {
   color: red;
 }
@@ -712,13 +720,13 @@ input[type="range"]::-webkit-slider-thumb:after{
     padding-left: 10px;
 }
 
-.car-show-image {
-  height: 739px;
-}
+// .car-show-image {
+//   height: 739px;
+// }
 
 .car-nav {
-  position: absolute;
-  bottom: 0px;
+  // position: absolute;
+  // bottom: 0px;
 }
 
 .navbar-favorite-button-logged-in {

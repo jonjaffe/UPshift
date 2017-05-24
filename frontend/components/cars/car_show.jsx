@@ -42,27 +42,27 @@ class CarShow extends React.Component {
 
     return (
       <div className="car-show">
-          <div className="car-show-image" style={{backgroundImage: `url(${this.props.car.image_url})`}}>
-            <div className="car-nav">
-              <div className="car-nav-left">
-                <div className="car-nav-basic-info">
-                  <h1 className="car-nav-name">
-                    {this.props.car.make} {this.props.car.model}
-                  </h1>
-                  <div className="car-nav-details">
-                    <p className="car-detail-yr">{this.props.car.year}</p> <p className="car-detail-miles">{this.props.car.mileage.toLocaleString()} miles</p>
-                  </div>
-                </div>
-                <div className="car-nav-price">
-                  ${this.props.car.price.toLocaleString()}
+        <img src={`${this.props.car.image_url}`} width={150} height={150} mode='fit' className='car-show-image' />
+
+          <div className="car-nav">
+            <div className="car-nav-left">
+              <div className="car-nav-basic-info">
+                <h1 className="car-nav-name">
+                  {this.props.car.make} {this.props.car.model}
+                </h1>
+                <div className="car-nav-details">
+                  <p className="car-detail-yr">{this.props.car.year}</p> <p className="car-detail-miles">{this.props.car.mileage.toLocaleString()} miles</p>
                 </div>
               </div>
-              <div className="car-nav-right">
-                {this.favoriteButton()}
-                <button className="test-drive-button">
-                  <span className="car-nav-test-drive-text">Test Drive</span>
-                </button>
+              <div className="car-nav-price">
+                ${this.props.car.price.toLocaleString()}
               </div>
+            </div>
+            <div className="car-nav-right">
+              {this.favoriteButton()}
+              <button className="test-drive-button">
+                <span className="car-nav-test-drive-text">Test Drive</span>
+              </button>
             </div>
           </div>
         <div className="car-show-detail">
