@@ -41,31 +41,29 @@ class CarShow extends React.Component {
 
     return (
       <div className="car-show">
-        <div className='car-show-image-container'>
-
-          <img src={this.props.car.image_url} alt={this.props.car.model} className='car-show-image' />
-        </div>
-        <section className="car-nav">
-          <div className="car-nav-left">
-            <div className="car-nav-basic-info">
-              <h1 className="car-nav-name">
-                {this.props.car.make} {this.props.car.model}
-              </h1>
-              <div className="car-nav-details">
-                <p className="car-detail-yr">{this.props.car.year}</p> <p className="car-detail-miles">{this.props.car.mileage.toLocaleString()} miles</p>
+          <div className="car-show-image" style={{backgroundImage: `url(${this.props.car.image_url})`}}>
+            <div className="car-nav">
+              <div className="car-nav-left">
+                <div className="car-nav-basic-info">
+                  <h1 className="car-nav-name">
+                    {this.props.car.make} {this.props.car.model}
+                  </h1>
+                  <div className="car-nav-details">
+                    <p className="car-detail-yr">{this.props.car.year}</p> <p className="car-detail-miles">{this.props.car.mileage.toLocaleString()} miles</p>
+                  </div>
+                </div>
+                <div className="car-nav-price">
+                  ${this.props.car.price.toLocaleString()}
+                </div>
+              </div>
+              <div className="car-nav-right">
+                {this.favoriteButton()}
+                <button className="test-drive-button">
+                  <span className="car-nav-test-drive-text">Test Drive</span>
+                </button>
               </div>
             </div>
-            <div className="car-nav-price">
-              ${this.props.car.price.toLocaleString()}
-            </div>
           </div>
-          <div className="car-nav-right">
-            {this.favoriteButton()}
-            <button className="test-drive-button">
-              <span className="car-nav-test-drive-text">Test Drive</span>
-            </button>
-          </div>
-        </section>
         <section className="car-show-detail">
           <h3>Details <span className="lower-case">for</span> {this.props.car.year} {this.props.car.make} {this.props.car.model}</h3>
           <table className="car-show-detail-table responsive-table ">

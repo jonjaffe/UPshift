@@ -1,19 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Checkbox from 'material-ui/Checkbox';
-import ActionFavorite from 'material-ui/svg-icons/action/favorite';
-import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
 
 class Navbar extends React.Component {
   constructor(props) {
     super(props)
     this.deleteAndRedirect = this.deleteAndRedirect.bind(this)
+    this.favoriteCounter = this.favoriteCounter.bind(this)
   }
 
   deleteAndRedirect() {
     this.props.deleteSession().then(() => this.props.history.push('/'))
+  }
+
+  favoriteCounter() {
+    if (Object.keys(this.props.currentUser.favorites).length !== 0) {
+      return (<p className='favorite-counter'>{Object.keys(this.props.currentUser.favorites).length}</p>)
+    }
   }
 
   render() {
@@ -27,7 +30,10 @@ class Navbar extends React.Component {
             </header>
           </div>
           <div className="navbar_right">
-            <span><Link to={`/favorites`}><img className="logged_in_heart" src="https://i.stack.imgur.com/iBCpb.png"/></Link></span>
+            <div className='navbar-favorite-container'>
+              {this.favoriteCounter()}
+              <Link to={`/favorites`}><i className="fa fa-heart navbar-favorite-button-logged-in fa-2x" aria-hidden="true"></i></Link>
+            </div>
             &nbsp;
             <span><button onClick={this.deleteAndRedirect}>Log Out</button></span>
           </div>
