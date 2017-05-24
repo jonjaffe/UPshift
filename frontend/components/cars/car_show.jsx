@@ -1,5 +1,6 @@
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom'
+const Modal = require('boron/DropModal')
 
 class CarShow extends React.Component {
   constructor(props) {
@@ -64,7 +65,7 @@ class CarShow extends React.Component {
               </div>
             </div>
           </div>
-        <section className="car-show-detail">
+        <div className="car-show-detail">
           <h3>Details <span className="lower-case">for</span> {this.props.car.year} {this.props.car.make} {this.props.car.model}</h3>
           <table className="car-show-detail-table responsive-table ">
             <thead>
@@ -96,7 +97,7 @@ class CarShow extends React.Component {
             </tbody>
           </table>
 
-        </section>
+        </div>
       </div>
     )
   }

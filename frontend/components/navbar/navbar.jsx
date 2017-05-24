@@ -15,7 +15,7 @@ class Navbar extends React.Component {
 
   favoriteCounter() {
     if (Object.keys(this.props.currentUser.favorites).length !== 0) {
-      return (<Link to='favorites'><p className='favorite-counter'>{Object.keys(this.props.currentUser.favorites).length}</p></Link>)
+      return (<Link to='/favorites'><p className='favorite-counter'>{Object.keys(this.props.currentUser.favorites).length}</p></Link>)
     }
   }
 

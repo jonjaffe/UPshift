@@ -23,7 +23,7 @@
  @import url('https://fonts.googleapis.com/css?family=Neuton');
  @import "font-awesome-sprockets";
  @import "font-awesome";
- @import "lib/animate.css";
+ // @import "lib/animate.css";
 
 
 
@@ -326,11 +326,8 @@ input[type="text"], input[type="password"] {
     border-right: .5px solid rgba(209, 206, 206, .5);
     border-bottom: .5px solid rgba(209, 206, 206, .5);
     overflow: scroll;
+    padding-left: 10px;
 
-}
-
-.search-form-box {
-  padding-left: 10px;
 }
 
 .search-form-list {

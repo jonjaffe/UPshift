@@ -66,8 +66,6 @@ class SearchForm extends React.Component {
               <button onClick={this.resetForm} className='search-reset-button'>Clear</button>
             </div>
           </div>
-          {/*{styleTop}
-          {makeTop}*/}
           <div className="search-form-header search-form-header-top">
             MAX PRICE
           </div>
