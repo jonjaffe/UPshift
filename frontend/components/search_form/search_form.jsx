@@ -7,8 +7,8 @@ class SearchForm extends React.Component {
     this.state = {
       price: 100000,
       mileage: 100000,
-      body_style: ['convertible', 'coupe', 'suv'],
-      make: ['Chevrolet', 'Porsche', 'Tesla'],
+      body_style: ['convertible', 'coupe', 'sedan', 'suv'],
+      make: ['BMW', 'Chevrolet', 'Ford', 'Lexus', 'Mazda', 'Mercedes-Benz', 'Porsche', 'Tesla'],
       transmission: ['automatic', 'manual'],
       drivetrain: ['4wd', 'awd', 'rwd']
     }
@@ -38,8 +38,8 @@ class SearchForm extends React.Component {
     this.setState({
       price: 100000,
       mileage: 100000,
-      body_style: ['convertible', 'coupe', 'suv'],
-      make: ['Chevrolet', 'Porsche', 'Tesla'],
+      body_style: ['convertible', 'coupe', 'sedan', 'suv'],
+      make: ['BMW', 'Chevrolet', 'Ford', 'Lexus', 'Mazda', 'Mercedes-Benz', 'Porsche', 'Tesla'],
       transmission: ['automatic', 'manual'],
       drivetrain: ['4wd', 'awd', 'rwd']
     })
@@ -73,7 +73,7 @@ class SearchForm extends React.Component {
           </div>
           <br/>
           <div className='search-form-current-value'>
-            $ {parseInt(this.state.price).toLocaleString()}
+            ${parseInt(this.state.price).toLocaleString()}
           </div>
           <br/>
           <input type='range' value={this.state.price} onChange={this.update('price')} className='search-form-slider' min='0' max='100000' step='5000' />
@@ -92,13 +92,19 @@ class SearchForm extends React.Component {
               <ul className='search-form-list'>
                 <li className='search-form-button'><button onClick={this.update('body_style')} value='convertible'>Convertible</button></li>
                 <li className='search-form-button'><button onClick={this.update('body_style')} value='coupe'>Coupe</button></li>
+                <li className='search-form-button'><button onClick={this.update('body_style')} value='sedan'>Sedan</button></li>
                 <li className='search-form-button'><button onClick={this.update('body_style')} value='suv'>SUV</button></li>
               </ul>
           </Collapsible>
           <br/>
           <Collapsible trigger="MAKE" className='search-form-header' openedClassName='search-form-header' transitionTime={250} >
             <ul className='search-form-list'>
+              <li className='search-form-button'><button onClick={this.update('make')} value='BMW'>BMW</button></li>
               <li className='search-form-button'><button onClick={this.update('make')} value='Chevrolet'>Chevrolet</button></li>
+              <li className='search-form-button'><button onClick={this.update('make')} value='Ford'>Ford</button></li>
+              <li className='search-form-button'><button onClick={this.update('make')} value='Lexus'>Lexus</button></li>
+              <li className='search-form-button'><button onClick={this.update('make')} value='Mazda'>Mazda</button></li>
+              <li className='search-form-button'><button onClick={this.update('make')} value='Mercedes-Benz'>Mercedes-Benz</button></li>
               <li className='search-form-button'><button onClick={this.update('make')} value='Porsche'>Porsche</button></li>
               <li className='search-form-button'><button onClick={this.update('make')} value='Tesla'>Tesla</button></li>
             </ul>

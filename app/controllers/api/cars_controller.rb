@@ -13,8 +13,8 @@ class Api::CarsController < ApplicationController
   def search
     search_price = search_params[:price] || 1000000
     search_mileage = search_params[:mileage] || 1000000
-    search_body_style = search_params[:body_style] || ["convertible", "coupe", "suv"]
-    search_make = search_params[:make] || ["Porsche", "Tesla", "Chevrolet"]
+    search_body_style = search_params[:body_style] || ["convertible", "coupe", "suv", "sedan"]
+    search_make = search_params[:make] || ["Porsche", "Tesla", "Chevrolet", "Mercedes-Benz", "Mazda", "Lexus", "Ford", "BMW"]
     search_transmission = search_params[:transmission] || ["automatic", "manual"]
     search_drivetrain = search_params[:drivetrain] || ["rwd", "awd", "4wd"]
 
