@@ -42,7 +42,7 @@ class CarShow extends React.Component {
 
     return (
       <div className="car-show">
-        <img src={`${this.props.car.image_url}`} width={150} height={150} mode='fit' className='car-show-image' />
+        <img src={`${this.props.car.image_url}`} className='car-show-image' />
 
           <div className="car-nav">
             <div className="car-nav-left">
@@ -66,6 +66,7 @@ class CarShow extends React.Component {
             </div>
           </div>
         <div className="car-show-detail">
+          
           <h3>Details <span className="lower-case">for</span> {this.props.car.year} {this.props.car.make} {this.props.car.model}</h3>
           <table className="car-show-detail-table responsive-table ">
             <thead>
