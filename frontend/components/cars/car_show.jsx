@@ -20,7 +20,7 @@ class CarShow extends React.Component {
 
   favoriteButton() {
     if (!!this.props.favorites[this.props.car.id]) {
-      return (<button className='car-show-favorite-button' onClick={() => this.props.deleteFavoriteCar(this.props.car.id)}><i className="fa fa-heart" aria-hidden="true"></i></button>)
+      return (<button className='car-show-favorite-button animated rubberBand' onClick={() => this.props.deleteFavoriteCar(this.props.car.id)}><i className="fa fa-heart" aria-hidden="true"></i></button>)
     } else {
       return (<button className='car-show-favorite-button' onClick={() => this.props.postFavoriteCar(this.props.car.id)}><i className="fa fa-heart-o" aria-hidden="true"></i></button>)
     }
@@ -66,7 +66,7 @@ class CarShow extends React.Component {
             </div>
           </div>
         <div className="car-show-detail">
-          
+
           <h3>Details <span className="lower-case">for</span> {this.props.car.year} {this.props.car.make} {this.props.car.model}</h3>
           <table className="car-show-detail-table responsive-table ">
             <thead>

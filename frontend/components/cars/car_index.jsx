@@ -17,7 +17,7 @@ class CarIndex extends React.Component {
       <div className="index">
         <section className="car_index">
           <SearchFormContainer count={this.props.cars.length} />
-          <ul className="all_cars">
+          <ul className="all_cars loader" onload={$("ul").removeClass("loader")}>
             {this.props.cars.map(car => <CarIndexItem car={car} key={car.id} favorited={!!this.props.favorites[car.id]} postFavoriteCar={this.props.postFavoriteCar} deleteFavoriteCar={this.props.deleteFavoriteCar} />)}
           </ul>
         </section>

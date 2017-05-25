@@ -15,7 +15,7 @@ class Navbar extends React.Component {
 
   favoriteCounter() {
     if (Object.keys(this.props.currentUser.favorites).length !== 0) {
-      return (<Link to='/favorites'><p className='favorite-counter'>{Object.keys(this.props.currentUser.favorites).length}</p></Link>)
+      return (<Link to='/favorites'><p className='favorite-counter animated lightSpeedIn'>{Object.keys(this.props.currentUser.favorites).length}</p></Link>)
     }
   }
 
@@ -30,7 +30,7 @@ class Navbar extends React.Component {
             </header>
           </div>
           <div className="navbar_right">
-            <div className='navbar-favorite-container'>
+            <div className='navbar-favorite-container animated bounceIn'>
               {this.favoriteCounter()}
               <Link to={`/favorites`}><i className="fa fa-heart navbar-favorite-button-logged-in fa-2x" aria-hidden="true"></i></Link>
             </div>
