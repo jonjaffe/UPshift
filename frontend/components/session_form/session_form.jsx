@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoAccount = this.demoAccount.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -27,6 +28,22 @@ class SessionForm extends React.Component {
   demoAccount(e) {
     e.preventDefault()
     this.props.processForm({user: {email: "dallas@google.com", password: "jonisthebest"}})
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    let email = "dallas@google.com";
+    let password = "jonisthebest";
+
+    for (let i = 0; i < email.length; i++) {
+      setTimeout(() => this.setState({email: email.slice(0, i + 1)}), (i * 100));
+    }
+
+    for (let j = 0; j < password.length; j++) {
+      setTimeout(() => this.setState({password: password.slice(0, j + 1)}), ((j + 17) * 100));
+    }
+
+    setTimeout(() => this.props.processForm({user: {email: "dallas@google.com", password: "jonisthebest"}}), 3000);
   }
 
   handleSubmit(e) {
@@ -71,7 +88,7 @@ class SessionForm extends React.Component {
   }
 
     render() {
-    const demoButton = this.props.formType === "login" ? <button className="demo_button" onClick={this.demoAccount}>Demo Account</button> : undefined//this props form type ? demo button : undefined
+    const demoButton = this.props.formType === "login" ? <button className="demo_button" onClick={this.handleDemo}>Demo Account</button> : undefined//this props form type ? demo button : undefined
     return (
       <div className="session_form_container">
         <form className="session_form_box" onSubmit={this.handleSubmit}>

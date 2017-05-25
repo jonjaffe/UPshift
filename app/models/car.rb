@@ -5,4 +5,9 @@ class Car < ApplicationRecord
   primary_key: :id,
   foreign_key: :car_id,
   class_name: 'Favorite'
+
+  has_many :test_drives,
+  primary_key: :id,
+  foreign_key: :car_id,
+  class_name: 'TestDrive'
 end

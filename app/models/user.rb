@@ -14,6 +14,11 @@ class User < ApplicationRecord
   through: :favorites,
   source: :car
 
+  has_many :test_drives,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: 'TestDrive'
+
   #ASSOCIATIONS TODO
 
   def password=(password)
