@@ -763,13 +763,21 @@ input[type="range"]::-webkit-slider-thumb:after{
 //   width: auto;
 // }
 
+.hidden {
+  display: none;
+}
+
 .loader {
-    border: 10px solid #f3f3f3;
     border-top: 10px solid #e14e4e;
     border-radius: 50%;
     width: 120px;
     height: 120px;
-    animation: spin 3s linear;
+    animation: spin 2s linear;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 30%;
 }
 
 @keyframes spin {

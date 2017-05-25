@@ -6,13 +6,18 @@ class Api::TestDrivesController < ApplicationController
 
   def create
     @test_drive = TestDrive.create(test_drive_params)
-    render :index
+    render :show
+  end
+
+  def show
+    @test_drive = TestDrive.find(params[:id])
+    render :show
   end
 
   def destroy
     @test_drive = TestDrive.find(params[:id])
     @test_drive.destroy
-    render :index
+    render :show
   end
 
   private
