@@ -20,7 +20,7 @@ class CarIndex extends React.Component {
         <section className="car_index">
           <SearchFormContainer count={this.props.cars.length} />
           <ul className={`all_cars ${this.state.hidden_class}`} >
-            {this.props.cars.map(car => <CarIndexItem car={car} key={car.id} favorited={!!this.props.favorites[car.id]} postFavoriteCar={this.props.postFavoriteCar} deleteFavoriteCar={this.props.deleteFavoriteCar} />)}
+            {this.props.cars.map(car => <CarIndexItem car={car} key={car.id} favorited={!!this.props.favorites[car.id]} postFavoriteCar={this.props.postFavoriteCar} deleteFavoriteCar={this.props.deleteFavoriteCar} loggedIn={this.props.loggedIn} />)}
           </ul>
         </section>
         <div className={`${this.state.css_class}`}>

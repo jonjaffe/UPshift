@@ -8,10 +8,11 @@ class TestDriveIndexItem extends React.Component {
 
 
   render() {
+    const car = this.props.cars[this.props.testDrive.car_id] || {model: ""};
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     return (
       <li className='test-drive-index-item'>
-        <p className='test-drive-index-text'>{this.props.cars[this.props.testDrive.car_id].model} {this.props.testDrive.date}</p>
+        <p className='test-drive-index-text'>{car.model} {this.props.testDrive.date}</p>
         <button className='test-drive-index-cancel-button' onClick={() => this.props.deleteTestDrive(this.props.testDrive.id)}>&#10006;</button>
       </li>
     )
