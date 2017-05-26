@@ -1,12 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
+import TestDriveIndexContainer from '../test_drives/test_drive_index_container'
 
 class Navbar extends React.Component {
   constructor(props) {
     super(props)
     this.deleteAndRedirect = this.deleteAndRedirect.bind(this)
     this.favoriteCounter = this.favoriteCounter.bind(this)
+  }
+
+  componentWillMount() {
+    this.props.getAllCars()
   }
 
   deleteAndRedirect() {
@@ -30,6 +35,7 @@ class Navbar extends React.Component {
             </header>
           </div>
           <div className="navbar_right">
+            <TestDriveIndexContainer />
             <div className='navbar-favorite-container animated bounceIn'>
               {this.favoriteCounter()}
               <Link to={`/favorites`}><i className="fa fa-heart navbar-favorite-button-logged-in fa-2x" aria-hidden="true"></i></Link>
@@ -48,9 +54,9 @@ class Navbar extends React.Component {
             </header>
           </div>
           <div className="navbar-right-logged-out">
-            <i className="fa fa-heart-o navbar-empty-heart fa-2x" aria-hidden="true"></i>
+
             <span className='navbar-sign-up'><Link to="/signup">Sign Up</Link></span>
-            <span><Link to="/login">Log In</Link></span>
+            <span><Link to="/login">Log In/Demo</Link></span>
           </div>
         </div>
       )

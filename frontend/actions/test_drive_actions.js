@@ -29,5 +29,5 @@ export const postTestDrive = (testDrive) => (dispatch) => {
 }
 
 export const deleteTestDrive = (id) => (dispatch) => {
-  return TestDriveUtil.deleteTestDrive(id).then((res) => dispatch(receiveTestDrive(res)))
+  return TestDriveUtil.deleteTestDrive(id).then((res) => dispatch(removeTestDrive(res)))
 }

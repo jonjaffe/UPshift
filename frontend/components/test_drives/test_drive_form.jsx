@@ -1,19 +1,27 @@
 import React from 'react';
+import { SingleDatePicker } from 'react-dates';
+import moment from 'moment';
+import omit from 'lodash/omit'
+
 
 class TestDriveForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      date: "",
-      car_id: ""
+      date: null,
+      car_id: "",
+      focused: false
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
+
+
   handleSubmit(e) {
     e.preventDefault()
-    this.setState({car_id: this.props.car.id}, () => {const test_drive = this.state
-    this.props.postTestDrive({test_drive})})
+    const test_drive = {car_id: this.props.car.id, date: this.state.date.format('LL')}
+    // this.setState({car_id: this.props.car.id, date: this.state.date.format('L')}, () => {const test_drive = this.state
+    this.props.postTestDrive({test_drive})
   }
 
   update(field) {
@@ -23,14 +31,19 @@ class TestDriveForm extends React.Component {
   }
 
   render() {
+    const { focused, date } = this.state;
+
     return (
       <div className='test-drive-form-container'>
-        <h2 className='test-drive-form-header'>
-          Test drive this {this.props.car.make} {this.props.car.model}
-        </h2>
         <form className='test-drive-form' onSubmit={this.handleSubmit}>
-          <input type='date' className='test-drive-form-date-input' value={this.state.date} onChange={this.update('date')}></input>
-          <input type='submit' className='test-drive-form-button' value='Book Test Drive'></input>
+          <SingleDatePicker
+            date={this.state.date}
+            numberOfMonths={Number("1")}
+            onDateChange={date => this.setState({ date })}
+            focused={this.state.focused}
+            onFocusChange={({ focused }) => this.setState({ focused })}
+          />
+          <input type='submit' className='test-drive-button' value='Test Drive'></input>
         </form>
       </div>
     )
@@ -38,5 +51,6 @@ class TestDriveForm extends React.Component {
 
 
 }
-
+// TestDriveForm.propTypes = propTypes
+// TestDriveForm.defaultProps = defaultProps
 export default TestDriveForm

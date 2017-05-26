@@ -17,7 +17,7 @@ const TestDrivesReducer = (state = defaultState, action) => {
     case RECEIVE_TEST_DRIVE:
       return Object.assign(newState, action.testDrive)
     case REMOVE_TEST_DRIVE:
-      delete newState[action.testDrive.id]
+      delete newState[Object.keys(action.testDrive)[0]]
       return newState
     default:
       return state;

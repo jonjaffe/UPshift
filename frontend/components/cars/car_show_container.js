@@ -11,7 +11,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {getCar: (id) => dispatch(getCar(id)),
     postFavoriteCar: (id) => dispatch(postFavoriteCar(id)),
-    deleteFavoriteCar: (id) => dispatch(deleteFavoriteCar(id))}
+    deleteFavoriteCar: (id) => dispatch(deleteFavoriteCar(id))
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CarShow)

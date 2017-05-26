@@ -23,6 +23,7 @@
  @import url('https://fonts.googleapis.com/css?family=Neuton');
  @import "font-awesome-sprockets";
  @import "font-awesome";
+ @import './datepicker';
  // @import "lib/animate.css";
 
 
@@ -115,16 +116,18 @@
 }
 
 .navbar_right {
+  font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
-  width: 150px;
-  justify-content: space-around;
+  min-width: 230px;
+  justify-content: space-between;
   span {
     margin-right: 10px;
   }
 }
 
 .navbar-right-logged-out {
+  font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
   width: 180px;
@@ -461,6 +464,7 @@ svg#heart {
 
 .car-nav-right {
   display: flex;
+  flex-direction: row;
   width: 300px;
   justify-content: flex-end;
   margin-right: 100px;
@@ -552,6 +556,7 @@ svg#heart {
   display: flex;
   flex-direction: column;
   padding-left: 50px;
+  margin-top: -63px;
 
   h3 {
     font-weight: lighter;
@@ -677,7 +682,7 @@ input[type="range"]::-webkit-slider-thumb:after{
 // }
 
 .car-show-favorite-button {
-  margin-right: 10px;
+  margin-right: 28px;
   border: .5px solid #e14e4e;
   color: #e14e4e;
   padding: 8px;
@@ -783,4 +788,66 @@ display: none;
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.test-drive-index-show-button {
+  background-color: #424242;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.test-drive-container {
+  position: relative;
+  display: inline-block;
+}
+
+.all-test-drives {
+  right: 0;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.test-drive-index-item {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+}
+
+.test-drive-index-cancel-button {
+  color: red;
+}
+
+.test-drive-index-item:hover {
+  background-color: #f1f1f1;
+}
+
+.test-drive-container:hover .all-test-drives {
+  display: block;
+}
+
+.CalendarDay:hover {
+  background: black;
+}
+
+.test-drive-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.SingleDatePicker {
+  margin-right: 10px;
+}
+
+input#date {
+  padding: 0;
 }

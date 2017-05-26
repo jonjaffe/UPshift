@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import TestDriveFormContainer from '../test_drives/test_drive_form_container'
-const Modal = require('boron/DropModal')
 
 class CarShow extends React.Component {
   constructor(props) {
@@ -26,6 +25,7 @@ class CarShow extends React.Component {
       return (<button className='car-show-favorite-button' onClick={() => this.props.postFavoriteCar(this.props.car.id)}><i className="fa fa-heart-o" aria-hidden="true"></i></button>)
     }
   }
+
 
   render() {
     const year = "Year"

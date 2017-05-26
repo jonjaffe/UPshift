@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 
 import { deleteSession } from '../../actions/session_actions';
+import { getAllCars } from '../../actions/car_actions';
 import Navbar from './navbar';
 
 
@@ -13,7 +14,9 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {deleteSession: () => dispatch(deleteSession())}
+  return {deleteSession: () => dispatch(deleteSession()),
+    getAllCars: () => dispatch(getAllCars())
+  }
 };
 
 export default connect(
