@@ -4,15 +4,16 @@ class TestDriveForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      date: undefined,
-      car_id: this.props.car.id
+      date: "",
+      car_id: ""
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleSubmit(e) {
     e.preventDefault()
-    this.props.postTestDrive(this.state)
+    this.setState({car_id: this.props.car.id}, () => {const test_drive = this.state
+    this.props.postTestDrive({test_drive})})
   }
 
   update(field) {

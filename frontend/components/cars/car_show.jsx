@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import TestDriveFormContainer from '../test_drives/test_drive_form_container'
 const Modal = require('boron/DropModal')
 
 class CarShow extends React.Component {
@@ -60,9 +61,7 @@ class CarShow extends React.Component {
             </div>
             <div className="car-nav-right">
               {this.favoriteButton()}
-              <button className="test-drive-button">
-                <span className="car-nav-test-drive-text">Test Drive</span>
-              </button>
+              <TestDriveFormContainer car={this.props.car} />
             </div>
           </div>
         <div className="car-show-detail">
