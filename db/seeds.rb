@@ -5,12 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.delete_all
+
 
 u1 = User.create(email: "dallas@google.com", password: "jonisthebest")
 u2 = User.create(email: "bono@google.com", password: "password")
 
 # c1 = Car.create(make: "Ferrari", model: "250 GT California", year: 1961, mileage: 126, price: 50000, transmission: "manual", drivetrain: "rwd", body_style: "convertible", image_url: "http://roa.h-cdn.co/assets/cm/14/47/980x551/546b0d2b5658a_-_modena1-lg.jpg")
 # c2 = Car.create(make: "Porsche", model: "Speedster", year: 1956, mileage: 315, price: 40000, transmission: "manual", drivetrain: "rwd", body_style: "convertible", image_url: "http://cdn.blessthisstuff.com/imagens/stuff/1957-porsche-speedster.jpg")
+
+Car.delete_all
 
 c1 = Car.create(make: "Tesla", model: "Roadster Sport", year: 2010, mileage: 2000, price: 74950, transmission: "automatic", drivetrain: "rwd", body_style: "convertible", image_url: "http://res.cloudinary.com/djhmjtt8o/image/upload/v1495806877/5NNNq_VxgQP1A-JO2UTzEsGTLj3ebnRtIBpEeVgxWr0y7r8VewzBNaRvF1aUx_WNrBRNga0MN6FeiZTzdg5JkA_w1440-h800_itnsjm.jpg")
 c2 = Car.create(make: "Porsche", model: "911 4 GTS", year: 2012, mileage: 22000, price: 74500, transmission: "manual", drivetrain: "awd", body_style: "coupe", image_url: "http://res.cloudinary.com/djhmjtt8o/image/upload/v1495807457/iTBqcjNs3N3ncZntAnYP8WmaAVWjItn02QgoNwsmTD-aKt6ceUrh3Ih7SQFX_hM0vhLPlG5zfg3b8sIBu33m_w1440-h800_nffypj.jpg")
