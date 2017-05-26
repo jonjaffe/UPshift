@@ -88,13 +88,13 @@ class SessionForm extends React.Component {
   }
 
     render() {
-    const demoButton = this.props.formType === "login" ? <button className="demo_button" onClick={this.handleDemo}>Demo Account</button> : undefined//this props form type ? demo button : undefined
+    const demoButton = this.props.formType === "login" ? <button className="demo_button" onClick={this.demoAccount}>Demo Account</button> : undefined//this props form type ? demo button : undefined
     return (
       <div className="session_form_container">
         <form className="session_form_box" onSubmit={this.handleSubmit}>
           <div className="top_session_form_text">{this.writeTopAction()}</div>
           <br/>
-          
+
           {this.renderErrors()}
           <br/>
           <div className="session_form">

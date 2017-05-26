@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 class CarIndexItem extends React.Component {
   constructor(props) {
     super(props)
-    console.log(this.props)
     this.favoriteButton = this.favoriteButton.bind(this)
   }
 

@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.getAllCars = getAllCars
   // window.getCar = getCar
   // window.deleteSession = deleteSession
-  window.getAllTestDrives = getAllTestDrives
-  window.getTestDrive = getTestDrive
-  window.postTestDrive = postTestDrive
-  window.deleteTestDrive = deleteTestDrive
+  // window.getAllTestDrives = getAllTestDrives
+  // window.getTestDrive = getTestDrive
+  // window.postTestDrive = postTestDrive
+  // window.deleteTestDrive = deleteTestDrive
   let store;
   if (window.session) {
     const preloadedState = { session: window.session  }
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore()
   }
-  window.store = store;
+  // window.store = store;
   const root = document.getElementById('root')
   ReactDOM.render(<Root store={store} />, root)
 });
