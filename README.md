@@ -7,7 +7,7 @@ UPshift
 UPshift is a full-stack web application created by Jon Jaffe, who enjoys writing in the third person. On the front-end, it uses React.js and Redux. On the back-end, it utilizes Ruby on Rails, a PostgreSQL database and jBuilder to build the data feeds.
 <Enter>
 
-This project was created in 1.5 weeks, and was inspired by Shift.
+This project was created within the given timeframe of 1.5 weeks, and was inspired by Shift.
 <Enter>
 
 The app's core features include:
@@ -29,11 +29,14 @@ The project began with a thorough proposal, which included:
 
 Technology
 ------
-## Back-end
+
+Further technological implementation details [here](https://github.com/jonjaffe/shift/blob/master/docs/technology.md)
+
+### Back-end
 * Ruby on Rails
 * PostgreSQL
 
-## Front-end
+### Front-end
 * React.js
 * Redux architectural framework
 
