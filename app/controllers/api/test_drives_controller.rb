@@ -5,7 +5,9 @@ class Api::TestDrivesController < ApplicationController
   end
 
   def create
-    @test_drive = TestDrive.create(test_drive_params)
+    @test_drive = TestDrive.new(test_drive_params)
+    @test_drive.user_id = current_user.id
+    @test_drive.save
     render :show
   end
 
@@ -22,6 +24,6 @@ class Api::TestDrivesController < ApplicationController
 
   private
   def test_drive_params
-    params.require(:test_drive).permit(:user_id, :car_id, :date)
+    params.require(:test_drive).permit(:car_id, :date)
   end
 end

@@ -11,5 +11,5 @@ export const postTestDrive = (testDrive) => {
 }
 
 export const deleteTestDrive = (id) => {
-  return $.ajax({url: `/api/cars/${id}`, method: 'DELETE'})
+  return $.ajax({url: `/api/test_drives/${id}`, method: 'DELETE'})
 }

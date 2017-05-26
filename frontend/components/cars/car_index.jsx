@@ -10,6 +10,7 @@ class CarIndex extends React.Component {
 
   componentDidMount() {
     this.props.getAllCars()
+    setTimeout(() => this.setState({css_class: "", hidden_class: ""}), 750)
   }
 
 
@@ -22,7 +23,9 @@ class CarIndex extends React.Component {
             {this.props.cars.map(car => <CarIndexItem car={car} key={car.id} favorited={!!this.props.favorites[car.id]} postFavoriteCar={this.props.postFavoriteCar} deleteFavoriteCar={this.props.deleteFavoriteCar} />)}
           </ul>
         </section>
+        <div className={`${this.state.css_class}`}>
 
+        </div>
       </div>
     )
   }
