@@ -1,6 +1,6 @@
-#UPshift
+UPshift
+======
 
-https://cl.ly/0S1g3o2c212b
 ![Homepage](https://d2ppvlu71ri8gs.cloudfront.net/items/0e032W0L160M2u0T1v0k/home_page.png)
 <Enter>
 
@@ -20,24 +20,26 @@ The app's core features include:
 
 ![Main functionality](https://d2ppvlu71ri8gs.cloudfront.net/items/2V2H3A2Z1V0V1z3s0I0e/main_functionality.gif)
 
-#Design
+Design
+------
 The project began with a thorough proposal, which included:
 * Mocking up wireframes
 * Outlining the project timeline
 * Formulating a database schema and component hierarchy
 
-#Technology
-##Back-end
+Technology
+------
+## Back-end
 * Ruby on Rails
 * PostgreSQL
 
-##Front-end
+## Front-end
 * React.js
 * Redux architectural framework
 
 
-#Future Plans
-###Test drive integration with mailer and Google Maps API
+# Future Plans
+### Test drive integration with mailer and Google Maps API
 Have the user receive emails when creating/modifying a scheduled test drive, and be able to use the Google Maps API to specify where they want to pick up the car
-###Sell a car
+### Sell a car
 Have a flow for the user to sell their car, including a value estimator of the car
