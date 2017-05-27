@@ -30,8 +30,6 @@ The project began with a thorough proposal, which included:
 Technology
 ------
 
-Further technological implementation details [here](https://github.com/jonjaffe/shift/blob/master/docs/technology.md)
-
 ### Back-end
 * Ruby on Rails
 * PostgreSQL
@@ -40,8 +38,10 @@ Further technological implementation details [here](https://github.com/jonjaffe/
 * React.js
 * Redux architectural framework
 
+Further technological implementation details [here](https://github.com/jonjaffe/shift/blob/master/docs/technology.md)
 
-# Future Plans
+Future Plans
+-----
 ### Test drive integration with mailer and Google Maps API
 Have the user receive emails when creating/modifying a scheduled test drive, and be able to use the Google Maps API to specify where they want to pick up the car
 ### Sell a car

@@ -1,6 +1,6 @@
 # Technology
 
-The following is a comprehensive implementation breakdown of UPshift's features. The app was created with React/Redux on the front-end, and Rails/ The app was developed using Rails/PostgreSQL on the backend and React/Redux on the front-end.
+The following is a comprehensive implementation breakdown of UPshift's features. The app was created with React/Redux on the front-end, and Rails/PostgreSQL on the back-end.
 
 ## Car Search
 
