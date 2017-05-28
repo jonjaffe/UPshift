@@ -8,16 +8,14 @@ class CarIndexItem extends React.Component {
   }
 
   favoriteButton() {
-    if (!this.props.loggedIn) {
+    if (!this.props.loggedIn && this.props.loggedIn !== undefined) {
       return (<Link to='login'><div className='car-index-favorite-button'><i className="fa fa-heart-o" aria-hidden="true"></i></div></Link>)
 
+    }
+    if (this.props.favorited) {
+      return (<button className='car-index-unfavorite-button animated rubberBand' onClick={() => this.props.deleteFavoriteCar(this.props.car.id)}><i className="fa fa-heart" aria-hidden="true"></i></button>)
     } else {
-
-      if (this.props.favorited) {
-        return (<button className='car-index-unfavorite-button animated rubberBand' onClick={() => this.props.deleteFavoriteCar(this.props.car.id)}><i className="fa fa-heart" aria-hidden="true"></i></button>)
-      } else {
-        return (<button className='car-index-favorite-button' onClick={() => this.props.postFavoriteCar(this.props.car.id)}><i className="fa fa-heart-o" aria-hidden="true"></i></button>)
-      }
+      return (<button className='car-index-favorite-button' onClick={() => this.props.postFavoriteCar(this.props.car.id)}><i className="fa fa-heart-o" aria-hidden="true"></i></button>)
     }
   }
 

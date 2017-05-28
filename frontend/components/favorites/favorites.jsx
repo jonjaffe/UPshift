@@ -11,7 +11,7 @@ class Favorites extends React.Component {
     return (
       <div>
         <ul className='all-favorite-cars'>
-          {this.props.favorites.map(car => <CarIndexItem car={car} key={car.id} favorited={true} postFavoriteCar={this.props.postFavoriteCar} deleteFavoriteCar={this.props.deleteFavoriteCar} />)}
+          {this.props.favorites.map(car => <CarIndexItem car={car} key={car.id} favorited={Boolean(true)} postFavoriteCar={this.props.postFavoriteCar} deleteFavoriteCar={this.props.deleteFavoriteCar} />)}
         </ul>
       </div>
     )
