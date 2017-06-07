@@ -465,7 +465,8 @@ svg#heart {
 .car-nav-right {
   display: flex;
   flex-direction: row;
-  width: 300px;
+  // width: 300px;
+  margin-left: 10px;
   justify-content: flex-end;
   margin-right: 100px;
   padding-right: 50px;
