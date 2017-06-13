@@ -556,6 +556,7 @@ svg#heart {
   font-family: 'Roboto';
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding-left: 50px;
   margin-top: -63px;
 
@@ -591,7 +592,7 @@ svg#heart {
   max-width: 600px;
   padding:5px;
   width: 100%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px -3px 15px -5px rgba(0, 0, 0, 0.1);
   animation: float 5s infinite;
   font-family: 'Roboto';
   margin-bottom: 10px;
@@ -661,6 +662,7 @@ input[type="range"]::-webkit-slider-thumb:after{
   font-family: 'Muli', sans-serif;
   font-size: 14px;
   margin-bottom: 7px;
+  margin-top: 10px;
   .search-reset-button {
     color: #e14e4e;
     padding-right: 10px;
