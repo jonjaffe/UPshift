@@ -28,7 +28,8 @@
   color: #565a5c;
   cursor: default; }
   .CalendarDay--highlighted-calendar:active {
-    background: #007a87; }
+    // background: #007a87;
+  }
 
 .CalendarDay--outside {
   border: 0;
@@ -63,7 +64,8 @@
 .CalendarDay--after-hovered-start {
   background: #b2f1ec;
   border: 1px double #80e8e0;
-  color: #007a87; }
+  // color: #007a87;
+}
   .CalendarDay--hovered-span:active,
   .CalendarDay--after-hovered-start:active {
     background: #80e8e0; }
@@ -71,13 +73,13 @@
 .CalendarDay--selected-start,
 .CalendarDay--selected-end,
 .CalendarDay--selected {
-  background: #00a699;
-  border: 1px double #00a699;
+  background: #e14e4e;
+  border: 1px double #e14e4e;
   color: #fff; }
   .CalendarDay--selected-start:active,
   .CalendarDay--selected-end:active,
   .CalendarDay--selected:active {
-    background: #00a699; }
+    background: #e14e4e; }
 
 .CalendarDay--blocked-calendar {
   background: #cacccd;
@@ -507,10 +509,11 @@
   color: #484848; }
 
 .DateInput__display-text--focused {
-  background: #99ede6;
-  border-color: #99ede6;
+  // background: #99ede6;
+  // border-color: #99ede6;
   border-radius: 3px;
-  color: #007a87; }
+  // color: #007a87;
+}
 
 .DateInput__display-text--disabled {
   font-style: italic; }
