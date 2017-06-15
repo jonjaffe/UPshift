@@ -5,7 +5,9 @@ import {getCar, postFavoriteCar, deleteFavoriteCar } from '../../actions/car_act
 
 const mapStateToProps = (state, ownProps) => {
   return {car: state.cars[ownProps.match.params.carId] || state.cars[0],
-  favorites: state.session.currentUser.favorites}
+  favorites: state.session.currentUser.favorites,
+  loggedIn: Boolean(state.session.currentUser.email)
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
