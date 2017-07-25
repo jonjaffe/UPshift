@@ -1,7 +1,7 @@
 UPshift
 ======
 
-![Homepage](https://d2ppvlu71ri8gs.cloudfront.net/items/0e032W0L160M2u0T1v0k/home_page.png)
+![Homepage](https://github.com/jonjaffe/UPshift/blob/master/docs/images/home_page.png)
 <Enter>
 
 UPshift is a full-stack web application created by Jon Jaffe. On the front-end, it uses React.js and Redux. On the back-end, it utilizes Ruby on Rails, a PostgreSQL database and jBuilder to build the data feeds.
