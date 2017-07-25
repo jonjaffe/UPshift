@@ -18,7 +18,7 @@ The app's core features include:
 * Favoriting/unfavoriting
 * Test drive scheduling
 
-![Main functionality](https://d2ppvlu71ri8gs.cloudfront.net/items/2V2H3A2Z1V0V1z3s0I0e/main_functionality.gif)
+![Main functionality](https://github.com/jonjaffe/UPshift/blob/master/docs/images/main_functionality.gif)
 
 Design
 ------
