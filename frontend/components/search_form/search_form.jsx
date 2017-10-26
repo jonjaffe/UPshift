@@ -49,15 +49,9 @@ class SearchForm extends React.Component {
     this.setState({field: value})
   }
 
-  // <button onClick={this.resetField} value={this.state.body_style}>{this.state.body_style}</button>
   render () {
     const styleTop = this.state.body_style instanceof Array ? undefined : <div>{this.state.body_style.toUpperCase()}</div>;
     const makeTop = this.state.make instanceof Array ? undefined : <div>{this.state.make.toUpperCase()}</div>
-    // const arr = [];
-    // for (let i = 0; i < this.state.body_style.length; i++) {
-    //   let style = this.state.body_style[i];
-    //   arr.push(<li className='search-form-button'><button onClick={this.update('body_style')} value={style}>{style.toUpperCase()}</button></li>)
-    // }
     return (
         <form className="search-form-box" onSubmit={this.handleSubmit}>
           <div className='search-form-top-text-container'>
