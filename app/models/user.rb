@@ -19,8 +19,6 @@ class User < ApplicationRecord
   foreign_key: :user_id,
   class_name: 'TestDrive'
 
-  #ASSOCIATIONS TODO
-
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
